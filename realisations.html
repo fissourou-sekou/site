@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    GALERIE DES RÉALISATIONS
+    Chaque photo ou vidéo est un bloc <li class="tuile"> dans la liste id="grille-galerie".
+    - data-cat : la catégorie utilisée par les filtres (papier-peint, peinture ou renovation)
+    - data-legende : le texte affiché sous la photo agrandie
+    Les nombres affichés sur les filtres se calculent tout seuls.
+    Pour ajouter une photo : mets le fichier dans medias/photos/ puis copie le modèle placé
+    juste avant la liste (une seule taille d'image suffit).
+    La même galerie existe en anglais dans en/realisations.html : ajoute aussi la photo là-bas,
+    avec une légende en anglais et des chemins qui commencent par ../ (ex. ../medias/photos/).
+  -->
+  <title>Réalisations · Sékou Fissourou, peintre en bâtiment</title>
+  <meta name="description" content="133 photos et 10 vidéos de chantiers : papiers peints panoramiques, peinture intérieure, rénovation de murs et de plafonds.">
+  <meta name="color-scheme" content="only light">
+  <meta name="theme-color" content="#F5F6F8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Réalisations · Sékou Fissourou, peintre en bâtiment">
+  <meta property="og:description" content="133 photos et 10 vidéos de chantiers : papiers peints panoramiques, peinture intérieure, rénovation de murs et de plafonds.">
+  <meta property="og:url" content="https://sekou-fissourou.pages.dev/realisations">
+  <meta property="og:image" content="https://sekou-fissourou.pages.dev/medias/partage.jpg">
+  <link rel="canonical" href="https://sekou-fissourou.pages.dev/realisations">
+  <link rel="alternate" hreflang="fr" href="https://sekou-fissourou.pages.dev/realisations">
+  <link rel="alternate" hreflang="en" href="https://sekou-fissourou.pages.dev/en/realisations">
+  <link rel="alternate" hreflang="x-default" href="https://sekou-fissourou.pages.dev/realisations">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/big-shoulders-stencil-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe entete-in">
+    <a class="marque" href="index.html" aria-label="Sékou Fissourou, peintre en bâtiment : accueil">
+      <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+        <g transform="translate(20 36)">
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+          <circle class="logo-rivet" r="3.2"/>
+        </g>
+      </svg>
+      <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Peintre en bâtiment</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html#prestations">Prestations</a>
+      <a href="realisations.html" aria-current="page">Réalisations</a>
+      <a href="index.html#avant-apres">Avant / après</a>
+      <a href="index.html#methode">Méthode</a>
+      <a href="index.html#questions">Questions</a>
+    </nav>
+    <a class="langue" href="en/realisations.html" hreflang="en" lang="en" aria-label="EN, English version" title="English version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9M12 3c-2.4 2.6-3.6 5.6-3.6 9s1.2 6.4 3.6 9"/></svg><span>EN</span></a>
+    <a class="btn btn-jaune btn-petit btn-devis" href="index.html#devis">Devis gratuit</a>
+    <button class="nav-bouton" type="button" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menu
+    </button>
+  </div>
+</header>
+
+<main id="contenu">
+
+<section class="page-tete" aria-labelledby="titre-page">
+  <div class="enveloppe">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Réalisations</span></nav>
+    <h1 class="page-titre" id="titre-page">Réalisations</h1>
+    <p class="page-intro">133 photos et 10 vidéos des chantiers de Sékou&nbsp;: papiers peints panoramiques, peinture, murs et plafonds remis à neuf.</p>
+  </div>
+</section>
+
+<div class="filtres-barre">
+  <div class="enveloppe">
+    <div class="filtres" role="group" aria-label="Filtrer les réalisations">
+        <button type="button" class="filtre" data-filtre="tout" aria-pressed="true">Tout <span class="filtre-nombre">143</span></button>
+        <button type="button" class="filtre" data-filtre="papier-peint" aria-pressed="false">Papier peint <span class="filtre-nombre">45</span></button>
+        <button type="button" class="filtre" data-filtre="peinture" aria-pressed="false">Peinture <span class="filtre-nombre">49</span></button>
+        <button type="button" class="filtre" data-filtre="renovation" aria-pressed="false">Rénovation <span class="filtre-nombre">49</span></button>
+        <button type="button" class="filtre" data-filtre="video" aria-pressed="false">Vidéos <span class="filtre-nombre">10</span></button>
+    </div>
+  </div>
+</div>
+
+<section class="section-galerie" aria-label="Photos et vidéos">
+  <div class="enveloppe">
+    <p class="galerie-statut" id="galerie-statut" aria-live="polite">133 photos et 10 vidéos</p>
+      <!--
+        MODÈLE POUR AJOUTER UNE PHOTO : copie ce bloc dans la liste ci-dessous et remplace le nom du fichier,
+        la catégorie (papier-peint, peinture ou renovation) et la légende.
+
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/ma-photo.jpg" data-galerie="galerie" data-legende="Salon repeint en blanc">
+            <img src="medias/photos/ma-photo.jpg" alt="Salon repeint en blanc" loading="lazy">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Salon repeint en blanc</span>
+          </a>
+        </li>
+      -->
+    <ul class="grille-galerie" id="grille-galerie">
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p057-l.webp" data-galerie="galerie" data-legende="Panoramique jungle, pose terminée" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p057-m.webp" srcset="medias/photos/p057-s.webp 480w, medias/photos/p057-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique jungle, pose terminée" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle, pose terminée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p024-l.webp" data-galerie="galerie" data-legende="Panoramique art déco aux palmiers" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p024-m.webp" srcset="medias/photos/p024-s.webp 480w, medias/photos/p024-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Panoramique art déco aux palmiers" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique art déco aux palmiers</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p042-l.webp" data-galerie="galerie" data-legende="Chambre d&#x27;enfant : papier peint voitures et soubassement bleu nuit" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p042-m.webp" srcset="medias/photos/p042-s.webp 480w, medias/photos/p042-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Chambre d&#x27;enfant : papier peint voitures et soubassement bleu nuit" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Chambre d&#x27;enfant : papier peint voitures et soubassement bleu nuit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p013-l.webp" data-galerie="galerie" data-legende="Pièce de vie à moulures, murs et plafond en blanc" data-largeur="1600" data-hauteur="1066">
+            <img src="medias/photos/p013-m.webp" srcset="medias/photos/p013-s.webp 480w, medias/photos/p013-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="640" alt="Pièce de vie à moulures, murs et plafond en blanc" loading="eager" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Pièce de vie à moulures, murs et plafond en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p034-l.webp" data-galerie="galerie" data-legende="Panoramique forêt dans une entrée" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p034-m.webp" srcset="medias/photos/p034-s.webp 480w, medias/photos/p034-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique forêt dans une entrée" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique forêt dans une entrée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p016-l.webp" data-galerie="galerie" data-legende="Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p016-m.webp" srcset="medias/photos/p016-s.webp 480w, medias/photos/p016-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v009.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v009-affiche.webp" data-legende="Pose d&#x27;un papier peint feuillage tropical" data-largeur="576" data-hauteur="1280">
+            <img src="medias/videos/v009-vignette.webp" srcset="medias/videos/v009-vignette.webp 360w, medias/videos/v009-affiche.webp 576w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="800" alt="Vidéo : Pose d&#x27;un papier peint feuillage tropical" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:07</span>
+            <span class="tuile-legende">Pose d&#x27;un papier peint feuillage tropical</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p053-l.webp" data-galerie="galerie" data-legende="Fresque murale illustrée, pose terminée" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p053-m.webp" srcset="medias/photos/p053-s.webp 480w, medias/photos/p053-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Fresque murale illustrée, pose terminée" loading="eager" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Fresque murale illustrée, pose terminée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p015-l.webp" data-galerie="galerie" data-legende="Appartement : murs bleu canard et bleu nuit" data-largeur="980" data-hauteur="1600">
+            <img src="medias/photos/p015-m.webp" srcset="medias/photos/p015-s.webp 480w, medias/photos/p015-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1567" alt="Appartement : murs bleu canard et bleu nuit" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Appartement : murs bleu canard et bleu nuit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p038-l.webp" data-galerie="galerie" data-legende="Panoramique à arches sous un habillage de tasseaux bois" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p038-m.webp" srcset="medias/photos/p038-s.webp 480w, medias/photos/p038-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique à arches sous un habillage de tasseaux bois" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique à arches sous un habillage de tasseaux bois</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p014-l.webp" data-galerie="galerie" data-legende="Portes doubles et boiseries moulurées repeintes" data-largeur="1600" data-hauteur="1066">
+            <img src="medias/photos/p014-m.webp" srcset="medias/photos/p014-s.webp 480w, medias/photos/p014-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="640" alt="Portes doubles et boiseries moulurées repeintes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Portes doubles et boiseries moulurées repeintes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p044-l.webp" data-galerie="galerie" data-legende="Panoramique jungle colorée, vue d&#x27;ensemble" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p044-m.webp" srcset="medias/photos/p044-s.webp 480w, medias/photos/p044-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Panoramique jungle colorée, vue d&#x27;ensemble" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle colorée, vue d&#x27;ensemble</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p019-l.webp" data-galerie="galerie" data-legende="Espace de restauration, vue d&#x27;ensemble" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p019-m.webp" srcset="medias/photos/p019-s.webp 480w, medias/photos/p019-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Espace de restauration, vue d&#x27;ensemble" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Espace de restauration, vue d&#x27;ensemble</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p046-l.webp" data-galerie="galerie" data-legende="Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p046-m.webp" srcset="medias/photos/p046-s.webp 480w, medias/photos/p046-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p160-l.webp" data-galerie="galerie" data-legende="Escalier en bois vernis" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p160-m.webp" srcset="medias/photos/p160-s.webp 480w, medias/photos/p160-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Escalier en bois vernis" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Escalier en bois vernis</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v003.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v003-affiche.webp" data-legende="Bureaux : pose d&#x27;un revêtement mural à motifs" data-largeur="390" data-hauteur="850">
+            <img src="medias/videos/v003-vignette.webp" srcset="medias/videos/v003-vignette.webp 360w, medias/videos/v003-affiche.webp 390w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="785" alt="Vidéo : Bureaux : pose d&#x27;un revêtement mural à motifs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:29</span>
+            <span class="tuile-legende">Bureaux : pose d&#x27;un revêtement mural à motifs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p029-l.webp" data-galerie="galerie" data-legende="Papier peint grandes feuilles terracotta et bleu nuit" data-largeur="1600" data-hauteur="774">
+            <img src="medias/photos/p029-m.webp" srcset="medias/photos/p029-s.webp 480w, medias/photos/p029-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="465" alt="Papier peint grandes feuilles terracotta et bleu nuit" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint grandes feuilles terracotta et bleu nuit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p036-l.webp" data-galerie="galerie" data-legende="Panoramique forêt sur un grand mur" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p036-m.webp" srcset="medias/photos/p036-s.webp 480w, medias/photos/p036-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Panoramique forêt sur un grand mur" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique forêt sur un grand mur</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p048-l.webp" data-galerie="galerie" data-legende="Papier peint bleu profond dans une cage d&#x27;escalier" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p048-m.webp" srcset="medias/photos/p048-s.webp 480w, medias/photos/p048-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Papier peint bleu profond dans une cage d&#x27;escalier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint bleu profond dans une cage d&#x27;escalier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p017-l.webp" data-galerie="galerie" data-legende="Espace de restauration : décor géométrique et murs peints" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p017-m.webp" srcset="medias/photos/p017-s.webp 480w, medias/photos/p017-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Espace de restauration : décor géométrique et murs peints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Espace de restauration : décor géométrique et murs peints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p056-l.webp" data-galerie="galerie" data-legende="Panoramique jungle : éléphant et girafes" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p056-m.webp" srcset="medias/photos/p056-s.webp 480w, medias/photos/p056-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Panoramique jungle : éléphant et girafes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle : éléphant et girafes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p075-l.webp" data-galerie="galerie" data-legende="Couloir repeint, portes et murs clairs" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p075-m.webp" srcset="medias/photos/p075-s.webp 480w, medias/photos/p075-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Couloir repeint, portes et murs clairs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Couloir repeint, portes et murs clairs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p021-l.webp" data-galerie="galerie" data-legende="Revêtement à motifs en relief" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p021-m.webp" srcset="medias/photos/p021-s.webp 480w, medias/photos/p021-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Revêtement à motifs en relief" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Revêtement à motifs en relief</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p022-l.webp" data-galerie="galerie" data-legende="Mur habillé d&#x27;un revêtement à motifs en relief" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p022-m.webp" srcset="medias/photos/p022-s.webp 480w, medias/photos/p022-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Mur habillé d&#x27;un revêtement à motifs en relief" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Mur habillé d&#x27;un revêtement à motifs en relief</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v178.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v178-affiche.webp" data-legende="Maison terminée : pièce de vie lumineuse" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v178-vignette.webp" srcset="medias/videos/v178-vignette.webp 360w, medias/videos/v178-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Maison terminée : pièce de vie lumineuse" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:57</span>
+            <span class="tuile-legende">Maison terminée : pièce de vie lumineuse</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p025-l.webp" data-galerie="galerie" data-legende="Panoramique art déco : détail des motifs" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p025-m.webp" srcset="medias/photos/p025-s.webp 480w, medias/photos/p025-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Panoramique art déco : détail des motifs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique art déco : détail des motifs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p026-l.webp" data-galerie="galerie" data-legende="Panoramique art déco, vue de face" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p026-m.webp" srcset="medias/photos/p026-s.webp 480w, medias/photos/p026-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Panoramique art déco, vue de face" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique art déco, vue de face</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p027-l.webp" data-galerie="galerie" data-legende="Pose du panoramique art déco, escabeau en place" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p027-m.webp" srcset="medias/photos/p027-s.webp 480w, medias/photos/p027-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Pose du panoramique art déco, escabeau en place" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Pose du panoramique art déco, escabeau en place</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p028-l.webp" data-galerie="galerie" data-legende="Panoramique art déco : vue en biais" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p028-m.webp" srcset="medias/photos/p028-s.webp 480w, medias/photos/p028-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Panoramique art déco : vue en biais" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique art déco : vue en biais</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p030-l.webp" data-galerie="galerie" data-legende="Grandes feuilles terracotta : fin de chantier" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p030-m.webp" srcset="medias/photos/p030-s.webp 480w, medias/photos/p030-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Grandes feuilles terracotta : fin de chantier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Grandes feuilles terracotta : fin de chantier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p031-l.webp" data-galerie="galerie" data-legende="Papier peint à motifs bleus dans une pièce en travaux" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p031-m.webp" srcset="medias/photos/p031-s.webp 480w, medias/photos/p031-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Papier peint à motifs bleus dans une pièce en travaux" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint à motifs bleus dans une pièce en travaux</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p032-l.webp" data-galerie="galerie" data-legende="Pose du papier peint à motifs bleus, sol protégé" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p032-m.webp" srcset="medias/photos/p032-s.webp 480w, medias/photos/p032-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Pose du papier peint à motifs bleus, sol protégé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Pose du papier peint à motifs bleus, sol protégé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p033-l.webp" data-galerie="galerie" data-legende="Papier peint à motifs bleus derrière une ossature bois" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p033-m.webp" srcset="medias/photos/p033-s.webp 480w, medias/photos/p033-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Papier peint à motifs bleus derrière une ossature bois" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint à motifs bleus derrière une ossature bois</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v171.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v171-affiche.webp" data-legende="Appartement terminé : entrée et couloirs" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v171-vignette.webp" srcset="medias/videos/v171-vignette.webp 360w, medias/videos/v171-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Appartement terminé : entrée et couloirs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:38</span>
+            <span class="tuile-legende">Appartement terminé : entrée et couloirs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p035-l.webp" data-galerie="galerie" data-legende="Panoramique forêt, vue depuis la porte" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p035-m.webp" srcset="medias/photos/p035-s.webp 480w, medias/photos/p035-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique forêt, vue depuis la porte" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique forêt, vue depuis la porte</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p037-l.webp" data-galerie="galerie" data-legende="Panoramique forêt : fin de pose" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p037-m.webp" srcset="medias/photos/p037-s.webp 480w, medias/photos/p037-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique forêt : fin de pose" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique forêt : fin de pose</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p041-l.webp" data-galerie="galerie" data-legende="Lés du panoramique à arches étalés avant la pose" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p041-m.webp" srcset="medias/photos/p041-s.webp 480w, medias/photos/p041-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Lés du panoramique à arches étalés avant la pose" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Lés du panoramique à arches étalés avant la pose</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p043-l.webp" data-galerie="galerie" data-legende="Panoramique jungle colorée entre deux murs jaunes" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p043-m.webp" srcset="medias/photos/p043-s.webp 480w, medias/photos/p043-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Panoramique jungle colorée entre deux murs jaunes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle colorée entre deux murs jaunes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p047-l.webp" data-galerie="galerie" data-legende="Panoramique noir et blanc sur toute la hauteur de l&#x27;escalier" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p047-m.webp" srcset="medias/photos/p047-s.webp 480w, medias/photos/p047-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique noir et blanc sur toute la hauteur de l&#x27;escalier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique noir et blanc sur toute la hauteur de l&#x27;escalier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p049-l.webp" data-galerie="galerie" data-legende="Papier peint bleu profond : raccord des motifs" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p049-m.webp" srcset="medias/photos/p049-s.webp 480w, medias/photos/p049-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Papier peint bleu profond : raccord des motifs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint bleu profond : raccord des motifs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p050-l.webp" data-galerie="galerie" data-legende="Pose du papier peint bleu autour d&#x27;une porte" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p050-m.webp" srcset="medias/photos/p050-s.webp 480w, medias/photos/p050-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Pose du papier peint bleu autour d&#x27;une porte" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Pose du papier peint bleu autour d&#x27;une porte</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p051-l.webp" data-galerie="galerie" data-legende="Papier peint bleu : finitions autour de l&#x27;huisserie" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p051-m.webp" srcset="medias/photos/p051-s.webp 480w, medias/photos/p051-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Papier peint bleu : finitions autour de l&#x27;huisserie" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint bleu : finitions autour de l&#x27;huisserie</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v005.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v005-affiche.webp" data-legende="Commerce : décor géométrique et espaces peints" data-largeur="390" data-hauteur="850">
+            <img src="medias/videos/v005-vignette.webp" srcset="medias/videos/v005-vignette.webp 360w, medias/videos/v005-affiche.webp 390w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="785" alt="Vidéo : Commerce : décor géométrique et espaces peints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:59</span>
+            <span class="tuile-legende">Commerce : décor géométrique et espaces peints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p052-l.webp" data-galerie="galerie" data-legende="Fresque murale illustrée en cours de pose" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p052-m.webp" srcset="medias/photos/p052-s.webp 480w, medias/photos/p052-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Fresque murale illustrée en cours de pose" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Fresque murale illustrée en cours de pose</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p054-l.webp" data-galerie="galerie" data-legende="Fresque murale illustrée : détail" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p054-m.webp" srcset="medias/photos/p054-s.webp 480w, medias/photos/p054-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Fresque murale illustrée : détail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Fresque murale illustrée : détail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p055-l.webp" data-galerie="galerie" data-legende="Mur peint en noir avant la fin de la pose de la fresque" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p055-m.webp" srcset="medias/photos/p055-s.webp 480w, medias/photos/p055-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Mur peint en noir avant la fin de la pose de la fresque" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Mur peint en noir avant la fin de la pose de la fresque</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p058-l.webp" data-galerie="galerie" data-legende="Premier lé du panoramique jungle" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p058-m.webp" srcset="medias/photos/p058-s.webp 480w, medias/photos/p058-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Premier lé du panoramique jungle" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Premier lé du panoramique jungle</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p059-l.webp" data-galerie="galerie" data-legende="Pose lé par lé du panoramique jungle" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p059-m.webp" srcset="medias/photos/p059-s.webp 480w, medias/photos/p059-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Pose lé par lé du panoramique jungle" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Pose lé par lé du panoramique jungle</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p060-l.webp" data-galerie="galerie" data-legende="Panoramique jungle mis en lumière" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p060-m.webp" srcset="medias/photos/p060-s.webp 480w, medias/photos/p060-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique jungle mis en lumière" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle mis en lumière</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p061-l.webp" data-galerie="galerie" data-legende="Panoramique jungle déroulé au sol avant la pose" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p061-m.webp" srcset="medias/photos/p061-s.webp 480w, medias/photos/p061-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Panoramique jungle déroulé au sol avant la pose" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle déroulé au sol avant la pose</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p062-l.webp" data-galerie="galerie" data-legende="Lés du panoramique jungle préparés au sol" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p062-m.webp" srcset="medias/photos/p062-s.webp 480w, medias/photos/p062-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Lés du panoramique jungle préparés au sol" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Lés du panoramique jungle préparés au sol</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v004.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v004-affiche.webp" data-legende="Commerce : mezzanine et escalier repeints" data-largeur="576" data-hauteur="1280">
+            <img src="medias/videos/v004-vignette.webp" srcset="medias/videos/v004-vignette.webp 360w, medias/videos/v004-affiche.webp 576w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="800" alt="Vidéo : Commerce : mezzanine et escalier repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Commerce : mezzanine et escalier repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p063-l.webp" data-galerie="galerie" data-legende="Panoramique jungle : contrôle des raccords avant la pose" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p063-m.webp" srcset="medias/photos/p063-s.webp 480w, medias/photos/p063-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Panoramique jungle : contrôle des raccords avant la pose" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle : contrôle des raccords avant la pose</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p064-l.webp" data-galerie="galerie" data-legende="Panoramique jungle : détail de l&#x27;éléphant" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p064-m.webp" srcset="medias/photos/p064-s.webp 480w, medias/photos/p064-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Panoramique jungle : détail de l&#x27;éléphant" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Panoramique jungle : détail de l&#x27;éléphant</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p110-l.webp" data-galerie="galerie" data-legende="Papier peint à motifs légers sur un mur de chambre" data-largeur="1600" data-hauteur="774">
+            <img src="medias/photos/p110-m.webp" srcset="medias/photos/p110-s.webp 480w, medias/photos/p110-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="465" alt="Papier peint à motifs légers sur un mur de chambre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint à motifs légers sur un mur de chambre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p194-l.webp" data-galerie="galerie" data-legende="Papier peint sur toute la hauteur d&#x27;une mezzanine" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p194-m.webp" srcset="medias/photos/p194-s.webp 480w, medias/photos/p194-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Papier peint sur toute la hauteur d&#x27;une mezzanine" loading="lazy" decoding="async">
+            <span class="tuile-cat">Papier peint</span>
+            <span class="tuile-legende">Papier peint sur toute la hauteur d&#x27;une mezzanine</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p011-l.webp" data-galerie="galerie" data-legende="Cuisine : murs repeints dans un gris rosé" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p011-m.webp" srcset="medias/photos/p011-s.webp 480w, medias/photos/p011-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Cuisine : murs repeints dans un gris rosé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Cuisine : murs repeints dans un gris rosé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p012-l.webp" data-galerie="galerie" data-legende="Cuisine : murs et plafond repeints" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p012-m.webp" srcset="medias/photos/p012-s.webp 480w, medias/photos/p012-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Cuisine : murs et plafond repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Cuisine : murs et plafond repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p018-l.webp" data-galerie="galerie" data-legende="Cuisine : murs repeints en blanc autour des colonnes" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p018-m.webp" srcset="medias/photos/p018-s.webp 480w, medias/photos/p018-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Cuisine : murs repeints en blanc autour des colonnes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Cuisine : murs repeints en blanc autour des colonnes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p039-l.webp" data-galerie="galerie" data-legende="Cuisine : mur beige mis en peinture" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p039-m.webp" srcset="medias/photos/p039-s.webp 480w, medias/photos/p039-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Cuisine : mur beige mis en peinture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Cuisine : mur beige mis en peinture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v007.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v007-affiche.webp" data-legende="Cage d&#x27;escalier repeinte" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v007-vignette.webp" srcset="medias/videos/v007-vignette.webp 360w, medias/videos/v007-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Cage d&#x27;escalier repeinte" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Cage d&#x27;escalier repeinte</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p040-l.webp" data-galerie="galerie" data-legende="Cuisine terminée, mur beige et fenêtre noire" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p040-m.webp" srcset="medias/photos/p040-s.webp 480w, medias/photos/p040-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Cuisine terminée, mur beige et fenêtre noire" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Cuisine terminée, mur beige et fenêtre noire</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p045-l.webp" data-galerie="galerie" data-legende="Chambre d&#x27;enfant avant la pose : soubassement bleu nuit" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p045-m.webp" srcset="medias/photos/p045-s.webp 480w, medias/photos/p045-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Chambre d&#x27;enfant avant la pose : soubassement bleu nuit" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Chambre d&#x27;enfant avant la pose : soubassement bleu nuit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p076-l.webp" data-galerie="galerie" data-legende="Porte moulurée repeinte en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p076-m.webp" srcset="medias/photos/p076-s.webp 480w, medias/photos/p076-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Porte moulurée repeinte en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Porte moulurée repeinte en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p080-l.webp" data-galerie="galerie" data-legende="Pièce repeinte en blanc, porte vitrée" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p080-m.webp" srcset="medias/photos/p080-s.webp 480w, medias/photos/p080-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Pièce repeinte en blanc, porte vitrée" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Pièce repeinte en blanc, porte vitrée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p081-l.webp" data-galerie="galerie" data-legende="Murs blancs et portes vitrées repeints" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p081-m.webp" srcset="medias/photos/p081-s.webp 480w, medias/photos/p081-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Murs blancs et portes vitrées repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Murs blancs et portes vitrées repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p082-l.webp" data-galerie="galerie" data-legende="Mur rouge orangé et plinthes repeints" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p082-m.webp" srcset="medias/photos/p082-s.webp 480w, medias/photos/p082-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Mur rouge orangé et plinthes repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Mur rouge orangé et plinthes repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p083-l.webp" data-galerie="galerie" data-legende="Porte coulissante vitrée laquée rouge" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p083-m.webp" srcset="medias/photos/p083-s.webp 480w, medias/photos/p083-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Porte coulissante vitrée laquée rouge" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Porte coulissante vitrée laquée rouge</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p084-l.webp" data-galerie="galerie" data-legende="Porte coulissante laquée rouge : détail du rail" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p084-m.webp" srcset="medias/photos/p084-s.webp 480w, medias/photos/p084-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Porte coulissante laquée rouge : détail du rail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Porte coulissante laquée rouge : détail du rail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v006.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v006-affiche.webp" data-legende="Résidence : couloirs et cour intérieure" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v006-vignette.webp" srcset="medias/videos/v006-vignette.webp 360w, medias/videos/v006-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Résidence : couloirs et cour intérieure" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Résidence : couloirs et cour intérieure</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p085-l.webp" data-galerie="galerie" data-legende="Radiateur et mur repeints" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p085-m.webp" srcset="medias/photos/p085-s.webp 480w, medias/photos/p085-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Radiateur et mur repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Radiateur et mur repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p086-l.webp" data-galerie="galerie" data-legende="Couloir d&#x27;un bâtiment public repeint" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p086-m.webp" srcset="medias/photos/p086-s.webp 480w, medias/photos/p086-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Couloir d&#x27;un bâtiment public repeint" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Couloir d&#x27;un bâtiment public repeint</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p099-l.webp" data-galerie="galerie" data-legende="Plafond refait, lisse et repeint" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p099-m.webp" srcset="medias/photos/p099-s.webp 480w, medias/photos/p099-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Plafond refait, lisse et repeint" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Plafond refait, lisse et repeint</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p100-l.webp" data-galerie="galerie" data-legende="Plafond lisse après réfection" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p100-m.webp" srcset="medias/photos/p100-s.webp 480w, medias/photos/p100-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Plafond lisse après réfection" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Plafond lisse après réfection</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p103-l.webp" data-galerie="galerie" data-legende="Pièce repeinte, murs clairs et portes-fenêtres" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p103-m.webp" srcset="medias/photos/p103-s.webp 480w, medias/photos/p103-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Pièce repeinte, murs clairs et portes-fenêtres" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Pièce repeinte, murs clairs et portes-fenêtres</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p111-l.webp" data-galerie="galerie" data-legende="Escalier bois et murs repeints" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p111-m.webp" srcset="medias/photos/p111-s.webp 480w, medias/photos/p111-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Escalier bois et murs repeints" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Escalier bois et murs repeints</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p130-l.webp" data-galerie="galerie" data-legende="Mur de briquettes repeint" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p130-m.webp" srcset="medias/photos/p130-s.webp 480w, medias/photos/p130-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Mur de briquettes repeint" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Mur de briquettes repeint</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p131-l.webp" data-galerie="galerie" data-legende="Muret de briquettes et plan de travail" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p131-m.webp" srcset="medias/photos/p131-s.webp 480w, medias/photos/p131-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Muret de briquettes et plan de travail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Muret de briquettes et plan de travail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v002.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v002-affiche.webp" data-legende="Maison en rénovation : visite du chantier" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v002-vignette.webp" srcset="medias/videos/v002-vignette.webp 360w, medias/videos/v002-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Maison en rénovation : visite du chantier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:56</span>
+            <span class="tuile-legende">Maison en rénovation : visite du chantier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p161-l.webp" data-galerie="galerie" data-legende="Escalier en bois : marches vernies" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p161-m.webp" srcset="medias/photos/p161-s.webp 480w, medias/photos/p161-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Escalier en bois : marches vernies" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Escalier en bois : marches vernies</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p162-l.webp" data-galerie="galerie" data-legende="Marches en bois vernies" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p162-m.webp" srcset="medias/photos/p162-s.webp 480w, medias/photos/p162-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Marches en bois vernies" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Marches en bois vernies</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p166-l.webp" data-galerie="galerie" data-legende="Sous-face d&#x27;escalier et murs repeints en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p166-m.webp" srcset="medias/photos/p166-s.webp 480w, medias/photos/p166-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Sous-face d&#x27;escalier et murs repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Sous-face d&#x27;escalier et murs repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p167-l.webp" data-galerie="galerie" data-legende="Escalier et murs repeints en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p167-m.webp" srcset="medias/photos/p167-s.webp 480w, medias/photos/p167-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Escalier et murs repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Escalier et murs repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p168-l.webp" data-galerie="galerie" data-legende="Chambre repeinte en blanc" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p168-m.webp" srcset="medias/photos/p168-s.webp 480w, medias/photos/p168-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Chambre repeinte en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Chambre repeinte en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p169-l.webp" data-galerie="galerie" data-legende="Chambre sous combles repeinte en blanc" data-largeur="1536" data-hauteur="1393">
+            <img src="medias/photos/p169-m.webp" srcset="medias/photos/p169-s.webp 480w, medias/photos/p169-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="871" alt="Chambre sous combles repeinte en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Chambre sous combles repeinte en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p170-l.webp" data-galerie="galerie" data-legende="Mur et plafond repeints en blanc" data-largeur="1536" data-hauteur="1536">
+            <img src="medias/photos/p170-m.webp" srcset="medias/photos/p170-s.webp 480w, medias/photos/p170-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="960" alt="Mur et plafond repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Mur et plafond repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p172-l.webp" data-galerie="galerie" data-legende="Plafond et retombée repeints en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p172-m.webp" srcset="medias/photos/p172-s.webp 480w, medias/photos/p172-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Plafond et retombée repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Plafond et retombée repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="video">
+          <a class="tuile-lien" href="medias/videos/v088.mp4" data-galerie="galerie" data-type="video" data-affiche="medias/videos/v088-affiche.webp" data-legende="Rénovation d&#x27;une maison : murs, plafonds et charpente" data-largeur="478" data-hauteur="850">
+            <img src="medias/videos/v088-vignette.webp" srcset="medias/videos/v088-vignette.webp 360w, medias/videos/v088-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Vidéo : Rénovation d&#x27;une maison : murs, plafonds et charpente" loading="lazy" decoding="async">
+            <span class="tuile-cat">Vidéo</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">1:59</span>
+            <span class="tuile-legende">Rénovation d&#x27;une maison : murs, plafonds et charpente</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p173-l.webp" data-galerie="galerie" data-legende="Plafond et poutre repeints en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p173-m.webp" srcset="medias/photos/p173-s.webp 480w, medias/photos/p173-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Plafond et poutre repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Plafond et poutre repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p180-l.webp" data-galerie="galerie" data-legende="Couloir repeint, murs clairs" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p180-m.webp" srcset="medias/photos/p180-s.webp 480w, medias/photos/p180-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Couloir repeint, murs clairs" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Couloir repeint, murs clairs</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p181-l.webp" data-galerie="galerie" data-legende="Toilettes : mur rose poudré" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p181-m.webp" srcset="medias/photos/p181-s.webp 480w, medias/photos/p181-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Toilettes : mur rose poudré" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Toilettes : mur rose poudré</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p185-l.webp" data-galerie="galerie" data-legende="Porte et mur repeints en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p185-m.webp" srcset="medias/photos/p185-s.webp 480w, medias/photos/p185-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Porte et mur repeints en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Porte et mur repeints en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p186-l.webp" data-galerie="galerie" data-legende="Porte et huisserie repeintes" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p186-m.webp" srcset="medias/photos/p186-s.webp 480w, medias/photos/p186-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Porte et huisserie repeintes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Porte et huisserie repeintes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p187-l.webp" data-galerie="galerie" data-legende="Portes moulurées repeintes en blanc" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p187-m.webp" srcset="medias/photos/p187-s.webp 480w, medias/photos/p187-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Portes moulurées repeintes en blanc" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Portes moulurées repeintes en blanc</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p195-l.webp" data-galerie="galerie" data-legende="Poutres bois et bandeau vert d&#x27;eau" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p195-m.webp" srcset="medias/photos/p195-s.webp 480w, medias/photos/p195-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Poutres bois et bandeau vert d&#x27;eau" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Poutres bois et bandeau vert d&#x27;eau</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p196-l.webp" data-galerie="galerie" data-legende="Plafond blanc, poutres et bandeau vert d&#x27;eau" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p196-m.webp" srcset="medias/photos/p196-s.webp 480w, medias/photos/p196-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Plafond blanc, poutres et bandeau vert d&#x27;eau" loading="lazy" decoding="async">
+            <span class="tuile-cat">Peinture</span>
+            <span class="tuile-legende">Plafond blanc, poutres et bandeau vert d&#x27;eau</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p020-l.webp" data-galerie="galerie" data-legende="Grand plateau en cours de rénovation, sols protégés" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p020-m.webp" srcset="medias/photos/p020-s.webp 480w, medias/photos/p020-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Grand plateau en cours de rénovation, sols protégés" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Grand plateau en cours de rénovation, sols protégés</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p071-l.webp" data-galerie="galerie" data-legende="Avant travaux : enduit qui se détache dans une cage d&#x27;escalier" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p071-m.webp" srcset="medias/photos/p071-s.webp 480w, medias/photos/p071-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : enduit qui se détache dans une cage d&#x27;escalier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : enduit qui se détache dans une cage d&#x27;escalier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p072-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur dégradé le long d&#x27;une main courante" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p072-m.webp" srcset="medias/photos/p072-s.webp 480w, medias/photos/p072-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : mur dégradé le long d&#x27;une main courante" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur dégradé le long d&#x27;une main courante</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p073-l.webp" data-galerie="galerie" data-legende="Plafond et murs enduits, prêts pour la peinture" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p073-m.webp" srcset="medias/photos/p073-s.webp 480w, medias/photos/p073-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Plafond et murs enduits, prêts pour la peinture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Plafond et murs enduits, prêts pour la peinture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p074-l.webp" data-galerie="galerie" data-legende="Couloir en cours de rénovation, enduits poncés" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p074-m.webp" srcset="medias/photos/p074-s.webp 480w, medias/photos/p074-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Couloir en cours de rénovation, enduits poncés" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Couloir en cours de rénovation, enduits poncés</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p077-l.webp" data-galerie="galerie" data-legende="Salle d&#x27;eau préparée avant peinture" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p077-m.webp" srcset="medias/photos/p077-s.webp 480w, medias/photos/p077-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Salle d&#x27;eau préparée avant peinture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Salle d&#x27;eau préparée avant peinture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p078-l.webp" data-galerie="galerie" data-legende="Avant travaux : allège abîmée sous une fenêtre" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p078-m.webp" srcset="medias/photos/p078-s.webp 480w, medias/photos/p078-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : allège abîmée sous une fenêtre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : allège abîmée sous une fenêtre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p079-l.webp" data-galerie="galerie" data-legende="Avant travaux : enduit décollé sous une fenêtre" data-largeur="1600" data-hauteur="1200">
+            <img src="medias/photos/p079-m.webp" srcset="medias/photos/p079-s.webp 480w, medias/photos/p079-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Avant travaux : enduit décollé sous une fenêtre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : enduit décollé sous une fenêtre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p087-l.webp" data-galerie="galerie" data-legende="Embrasure de fenêtre en cours de préparation" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p087-m.webp" srcset="medias/photos/p087-s.webp 480w, medias/photos/p087-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Embrasure de fenêtre en cours de préparation" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Embrasure de fenêtre en cours de préparation</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p089-l.webp" data-galerie="galerie" data-legende="Avant travaux : fissures au plafond" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p089-m.webp" srcset="medias/photos/p089-s.webp 480w, medias/photos/p089-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : fissures au plafond" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : fissures au plafond</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p090-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond fissuré près des fenêtres" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p090-m.webp" srcset="medias/photos/p090-s.webp 480w, medias/photos/p090-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Avant travaux : plafond fissuré près des fenêtres" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond fissuré près des fenêtres</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p091-l.webp" data-galerie="galerie" data-legende="Fissure de plafond ouverte avant rebouchage" data-largeur="1152" data-hauteur="1434">
+            <img src="medias/photos/p091-m.webp" srcset="medias/photos/p091-s.webp 480w, medias/photos/p091-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1195" alt="Fissure de plafond ouverte avant rebouchage" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Fissure de plafond ouverte avant rebouchage</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p092-l.webp" data-galerie="galerie" data-legende="Fissure de plafond ouverte et traitée" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p092-m.webp" srcset="medias/photos/p092-s.webp 480w, medias/photos/p092-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Fissure de plafond ouverte et traitée" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Fissure de plafond ouverte et traitée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p093-l.webp" data-galerie="galerie" data-legende="Combles : bandes et enduits sur plaques de plâtre" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p093-m.webp" srcset="medias/photos/p093-s.webp 480w, medias/photos/p093-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Combles : bandes et enduits sur plaques de plâtre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Combles : bandes et enduits sur plaques de plâtre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p094-l.webp" data-galerie="galerie" data-legende="Combles : joints de plaques enduits" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p094-m.webp" srcset="medias/photos/p094-s.webp 480w, medias/photos/p094-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Combles : joints de plaques enduits" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Combles : joints de plaques enduits</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p095-l.webp" data-galerie="galerie" data-legende="Combles : charpente apparente et plafond enduit" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p095-m.webp" srcset="medias/photos/p095-s.webp 480w, medias/photos/p095-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Combles : charpente apparente et plafond enduit" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Combles : charpente apparente et plafond enduit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p096-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur dégradé derrière un meuble" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p096-m.webp" srcset="medias/photos/p096-s.webp 480w, medias/photos/p096-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : mur dégradé derrière un meuble" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur dégradé derrière un meuble</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p097-l.webp" data-galerie="galerie" data-legende="Avant travaux : traces d&#x27;humidité dans un angle" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p097-m.webp" srcset="medias/photos/p097-s.webp 480w, medias/photos/p097-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : traces d&#x27;humidité dans un angle" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : traces d&#x27;humidité dans un angle</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p098-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond qui s&#x27;écaille" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p098-m.webp" srcset="medias/photos/p098-s.webp 480w, medias/photos/p098-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Avant travaux : plafond qui s&#x27;écaille" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond qui s&#x27;écaille</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p101-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond effondré, lattis apparent" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p101-m.webp" srcset="medias/photos/p101-s.webp 480w, medias/photos/p101-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : plafond effondré, lattis apparent" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond effondré, lattis apparent</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p102-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond fissuré jusqu&#x27;au lattis" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p102-m.webp" srcset="medias/photos/p102-s.webp 480w, medias/photos/p102-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : plafond fissuré jusqu&#x27;au lattis" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond fissuré jusqu&#x27;au lattis</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p104-l.webp" data-galerie="galerie" data-legende="Avant travaux : cuisine aux murs orange abîmés" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p104-m.webp" srcset="medias/photos/p104-s.webp 480w, medias/photos/p104-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Avant travaux : cuisine aux murs orange abîmés" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : cuisine aux murs orange abîmés</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p105-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur de cuisine fissuré" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p105-m.webp" srcset="medias/photos/p105-s.webp 480w, medias/photos/p105-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Avant travaux : mur de cuisine fissuré" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur de cuisine fissuré</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p106-l.webp" data-galerie="galerie" data-legende="Avant travaux : porte et mur orange" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p106-m.webp" srcset="medias/photos/p106-s.webp 480w, medias/photos/p106-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Avant travaux : porte et mur orange" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : porte et mur orange</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p109-l.webp" data-galerie="galerie" data-legende="Mur rebouché à l&#x27;enduit, sol protégé" data-largeur="1047" data-hauteur="1600">
+            <img src="medias/photos/p109-m.webp" srcset="medias/photos/p109-s.webp 480w, medias/photos/p109-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Mur rebouché à l&#x27;enduit, sol protégé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Mur rebouché à l&#x27;enduit, sol protégé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p127-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur dégradé, échelles en place" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p127-m.webp" srcset="medias/photos/p127-s.webp 480w, medias/photos/p127-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : mur dégradé, échelles en place" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur dégradé, échelles en place</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p128-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur ouvert près d&#x27;une fenêtre" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p128-m.webp" srcset="medias/photos/p128-s.webp 480w, medias/photos/p128-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : mur ouvert près d&#x27;une fenêtre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur ouvert près d&#x27;une fenêtre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p129-l.webp" data-galerie="galerie" data-legende="Mur en cours de finition, enduit et peinture" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p129-m.webp" srcset="medias/photos/p129-s.webp 480w, medias/photos/p129-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Mur en cours de finition, enduit et peinture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Mur en cours de finition, enduit et peinture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p151-l.webp" data-galerie="galerie" data-legende="Avant travaux : enduit boursouflé" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p151-m.webp" srcset="medias/photos/p151-s.webp 480w, medias/photos/p151-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : enduit boursouflé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : enduit boursouflé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p152-l.webp" data-galerie="galerie" data-legende="Avant travaux : fissure au-dessus d&#x27;une porte" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p152-m.webp" srcset="medias/photos/p152-s.webp 480w, medias/photos/p152-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : fissure au-dessus d&#x27;une porte" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : fissure au-dessus d&#x27;une porte</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p153-l.webp" data-galerie="galerie" data-legende="Avant travaux : fissure et reprise d&#x27;enduit" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p153-m.webp" srcset="medias/photos/p153-s.webp 480w, medias/photos/p153-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : fissure et reprise d&#x27;enduit" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : fissure et reprise d&#x27;enduit</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p154-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond de salle de bain écaillé" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p154-m.webp" srcset="medias/photos/p154-s.webp 480w, medias/photos/p154-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Avant travaux : plafond de salle de bain écaillé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond de salle de bain écaillé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p155-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond de salle de bain abîmé" data-largeur="1600" data-hauteur="1032">
+            <img src="medias/photos/p155-m.webp" srcset="medias/photos/p155-s.webp 480w, medias/photos/p155-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Avant travaux : plafond de salle de bain abîmé" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond de salle de bain abîmé</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p156-l.webp" data-galerie="galerie" data-legende="Avant travaux : trou dans un plafond, mesuré avant réparation" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p156-m.webp" srcset="medias/photos/p156-s.webp 480w, medias/photos/p156-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : trou dans un plafond, mesuré avant réparation" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : trou dans un plafond, mesuré avant réparation</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p157-l.webp" data-galerie="galerie" data-legende="Avant travaux : plafond écaillé au-dessus d&#x27;une douche" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p157-m.webp" srcset="medias/photos/p157-s.webp 480w, medias/photos/p157-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Avant travaux : plafond écaillé au-dessus d&#x27;une douche" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : plafond écaillé au-dessus d&#x27;une douche</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p158-l.webp" data-galerie="galerie" data-legende="Plafond rebouché, prêt à peindre" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p158-m.webp" srcset="medias/photos/p158-s.webp 480w, medias/photos/p158-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Plafond rebouché, prêt à peindre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Plafond rebouché, prêt à peindre</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p159-l.webp" data-galerie="galerie" data-legende="Fissures de plafond rebouchées" data-largeur="1396" data-hauteur="1600">
+            <img src="medias/photos/p159-m.webp" srcset="medias/photos/p159-s.webp 480w, medias/photos/p159-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Fissures de plafond rebouchées" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Fissures de plafond rebouchées</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p174-l.webp" data-galerie="galerie" data-legende="Avant travaux : mur abîmé près du sol" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p174-m.webp" srcset="medias/photos/p174-s.webp 480w, medias/photos/p174-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : mur abîmé près du sol" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : mur abîmé près du sol</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p175-l.webp" data-galerie="galerie" data-legende="Avant travaux : reprise d&#x27;enduit sur un angle" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p175-m.webp" srcset="medias/photos/p175-s.webp 480w, medias/photos/p175-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : reprise d&#x27;enduit sur un angle" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : reprise d&#x27;enduit sur un angle</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p176-l.webp" data-galerie="galerie" data-legende="Avant travaux : fissure au-dessus d&#x27;une porte vitrée" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p176-m.webp" srcset="medias/photos/p176-s.webp 480w, medias/photos/p176-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Avant travaux : fissure au-dessus d&#x27;une porte vitrée" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : fissure au-dessus d&#x27;une porte vitrée</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p177-l.webp" data-galerie="galerie" data-legende="Fissure ouverte et rebouchée au-dessus d&#x27;une porte" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p177-m.webp" srcset="medias/photos/p177-s.webp 480w, medias/photos/p177-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Fissure ouverte et rebouchée au-dessus d&#x27;une porte" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Fissure ouverte et rebouchée au-dessus d&#x27;une porte</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p179-l.webp" data-galerie="galerie" data-legende="Mur traité avant peinture" data-largeur="1200" data-hauteur="1600">
+            <img src="medias/photos/p179-m.webp" srcset="medias/photos/p179-s.webp 480w, medias/photos/p179-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Mur traité avant peinture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Mur traité avant peinture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p182-l.webp" data-galerie="galerie" data-legende="Avant travaux : trou dans un mur" data-largeur="1536" data-hauteur="1352">
+            <img src="medias/photos/p182-m.webp" srcset="medias/photos/p182-s.webp 480w, medias/photos/p182-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="845" alt="Avant travaux : trou dans un mur" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : trou dans un mur</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p183-l.webp" data-galerie="galerie" data-legende="Avant travaux : gaine et plafond dans un cellier" data-largeur="1536" data-hauteur="901">
+            <img src="medias/photos/p183-m.webp" srcset="medias/photos/p183-s.webp 480w, medias/photos/p183-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="563" alt="Avant travaux : gaine et plafond dans un cellier" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : gaine et plafond dans un cellier</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p188-l.webp" data-galerie="galerie" data-legende="Plafond et poutres en cours de finition" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p188-m.webp" srcset="medias/photos/p188-s.webp 480w, medias/photos/p188-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Plafond et poutres en cours de finition" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Plafond et poutres en cours de finition</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p189-l.webp" data-galerie="galerie" data-legende="Avant travaux : cuisine aux murs bruts" data-largeur="1600" data-hauteur="900">
+            <img src="medias/photos/p189-m.webp" srcset="medias/photos/p189-s.webp 480w, medias/photos/p189-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Avant travaux : cuisine aux murs bruts" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Avant travaux : cuisine aux murs bruts</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="medias/photos/p191-l.webp" data-galerie="galerie" data-legende="Combles : enduits sur plaques de plâtre" data-largeur="900" data-hauteur="1600">
+            <img src="medias/photos/p191-m.webp" srcset="medias/photos/p191-s.webp 480w, medias/photos/p191-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Combles : enduits sur plaques de plâtre" loading="lazy" decoding="async">
+            <span class="tuile-cat">Rénovation</span>
+            <span class="tuile-legende">Combles : enduits sur plaques de plâtre</span>
+          </a>
+        </li>
+    </ul>
+    <div class="galerie-plus"><button type="button" class="btn btn-contour" id="galerie-plus" hidden>Afficher plus</button></div>
+  </div>
+</section>
+
+<section class="cta-bande" aria-labelledby="titre-cta">
+  <div class="enveloppe cta-grille">
+    <div>
+      <h2 id="titre-cta">Un projet pour vos murs&nbsp;?</h2>
+      <p>Sékou se déplace pour voir les surfaces et vous remet un devis gratuit et détaillé.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-jaune" href="index.html#devis">Demander un devis gratuit</a>
+      <a class="btn btn-contour" href="tel:+33783440311"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Appeler le <span class="nowrap">07 83 44 03 11</span></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied bande">
+  <div class="enveloppe">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="index.html" aria-label="Accueil">
+          <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+            <g transform="translate(20 36)">
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+              <circle class="logo-rivet" r="3.2"/>
+            </g>
+          </svg>
+          <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Peintre en bâtiment</span></span>
+        </a>
+        <p class="pied-intro">Peinture, papiers peints panoramiques, réparation des murs et des plafonds. Devis gratuit après visite.</p>
+      </div>
+      <div>
+        <p class="pied-titre">Le site</p>
+        <ul>
+          <li><a href="index.html#prestations">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="index.html#avant-apres">Avant / après</a></li>
+          <li><a href="index.html#methode">Méthode</a></li>
+          <li><a href="index.html#questions">Questions fréquentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied-titre">Contact</p>
+        <ul>
+          <li><span class="nowrap">07 83 44 03 11</span></li>
+          <li>fissourousekou@gmail.com</li>
+          <li><a href="index.html#devis">Demander un devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <details class="mentions">
+        <summary>Mentions légales</summary>
+        <dl>
+          <dt>Éditeur</dt><dd>Sékou Fissourou, peintre en bâtiment</dd>
+          <dt>Statut et SIRET</dt><dd><span class="a-completer">à compléter</span></dd>
+          <dt>Adresse</dt><dd><span class="a-completer">à compléter</span></dd>
+          <dt>Contact</dt><dd><span class="nowrap">07 83 44 03 11</span> · fissourousekou@gmail.com</dd>
+          <dt>Directeur de la publication</dt><dd>Sékou Fissourou</dd>
+          <dt>Hébergeur</dt><dd>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis · <span class="nowrap">+1 650 319 8930</span></dd>
+        </dl>
+        <p>Les informations saisies dans le formulaire de devis ne sont pas enregistrées par ce site. Elles sont transmises uniquement par WhatsApp ou par email, à votre initiative.</p>
+      </details>
+      <p>© 2026 Sékou Fissourou</p>
+    </div>
+  </div>
+</footer>
+
+<div class="barre-mobile">
+  <a class="btn btn-contour" href="tel:+33783440311">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Appeler
+  </a>
+  <a class="btn btn-jaune" href="index.html#devis">Devis gratuit</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

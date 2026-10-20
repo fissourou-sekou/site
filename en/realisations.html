@@ -1,0 +1,1190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    GALERIE DES RÉALISATIONS
+    Chaque photo ou vidéo est un bloc <li class="tuile"> dans la liste id="grille-galerie".
+    - data-cat : la catégorie utilisée par les filtres (papier-peint, peinture ou renovation)
+    - data-legende : le texte affiché sous la photo agrandie
+    Les nombres affichés sur les filtres se calculent tout seuls.
+    Pour ajouter une photo : mets le fichier dans medias/photos/ puis copie le modèle placé
+    juste avant la liste (une seule taille d'image suffit).
+    Ceci est la version anglaise : la même galerie existe en français dans ../realisations.html.
+    Ajoute chaque nouvelle photo dans les deux pages, avec une légende en anglais ici
+    et des chemins qui commencent par ../ (ex. ../medias/photos/).
+  -->
+  <title>Projects · Sékou Fissourou, painter and decorator</title>
+  <meta name="description" content="133 photos and 10 videos of his work: wallpaper murals, interior painting, wall and ceiling renovation.">
+  <meta name="color-scheme" content="only light">
+  <meta name="theme-color" content="#F5F6F8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:title" content="Projects · Sékou Fissourou, painter and decorator">
+  <meta property="og:description" content="133 photos and 10 videos of his work: wallpaper murals, interior painting, wall and ceiling renovation.">
+  <meta property="og:url" content="https://sekou-fissourou.pages.dev/en/realisations">
+  <meta property="og:image" content="https://sekou-fissourou.pages.dev/medias/partage.jpg">
+  <link rel="canonical" href="https://sekou-fissourou.pages.dev/en/realisations">
+  <link rel="alternate" hreflang="fr" href="https://sekou-fissourou.pages.dev/realisations">
+  <link rel="alternate" hreflang="en" href="https://sekou-fissourou.pages.dev/en/realisations">
+  <link rel="alternate" hreflang="x-default" href="https://sekou-fissourou.pages.dev/realisations">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/big-shoulders-stencil-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe entete-in">
+    <a class="marque" href="index.html" aria-label="Sékou Fissourou, painter and decorator: home">
+      <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+        <g transform="translate(20 36)">
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+          <circle class="logo-rivet" r="3.2"/>
+        </g>
+      </svg>
+      <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Painter &amp; decorator</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html#prestations">Services</a> <a href="realisations.html" aria-current="page">Projects</a> <a href="index.html#avant-apres">Before / after</a> <a href="index.html#methode">Process</a> <a href="index.html#questions">FAQ</a>
+    </nav>
+    <a class="langue" href="../realisations.html" hreflang="fr" lang="fr" aria-label="FR, version française" title="Version française"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9M12 3c-2.4 2.6-3.6 5.6-3.6 9s1.2 6.4 3.6 9"/></svg><span>FR</span></a>
+    <a class="btn btn-jaune btn-petit btn-devis" href="index.html#devis">Free quote</a>
+    <button class="nav-bouton" type="button" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menu
+    </button>
+  </div>
+</header>
+
+<main id="contenu">
+
+<section class="page-tete" aria-labelledby="titre-page">
+  <div class="enveloppe">
+    <nav class="fil" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Projects</span></nav>
+    <h1 class="page-titre" id="titre-page">Projects</h1>
+    <p class="page-intro">133 photos and 10 videos of Sékou's work: wallpaper murals, painting, walls and ceilings made like new.</p>
+  </div>
+</section>
+
+<div class="filtres-barre">
+  <div class="enveloppe">
+    <div class="filtres" role="group" aria-label="Filter the projects">
+        <button type="button" class="filtre" data-filtre="tout" aria-pressed="true">All <span class="filtre-nombre">143</span></button>
+        <button type="button" class="filtre" data-filtre="papier-peint" aria-pressed="false">Wallpaper <span class="filtre-nombre">45</span></button>
+        <button type="button" class="filtre" data-filtre="peinture" aria-pressed="false">Painting <span class="filtre-nombre">49</span></button>
+        <button type="button" class="filtre" data-filtre="renovation" aria-pressed="false">Renovation <span class="filtre-nombre">49</span></button>
+        <button type="button" class="filtre" data-filtre="video" aria-pressed="false">Videos <span class="filtre-nombre">10</span></button>
+    </div>
+  </div>
+</div>
+
+<section class="section-galerie" aria-label="Photos and videos">
+  <div class="enveloppe">
+    <p class="galerie-statut" id="galerie-statut" aria-live="polite">133 photos and 10 videos</p>
+      <!--
+        MODÈLE POUR AJOUTER UNE PHOTO : copie ce bloc dans la liste ci-dessous et remplace le nom du fichier,
+        la catégorie (papier-peint, peinture ou renovation) et la légende.
+
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/ma-photo.jpg" data-galerie="galerie" data-legende="Living room painted white">
+            <img src="../medias/photos/ma-photo.jpg" alt="Living room painted white" loading="lazy">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Living room painted white</span>
+          </a>
+        </li>
+      -->
+    <ul class="grille-galerie" id="grille-galerie">
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p057-l.webp" data-galerie="galerie" data-legende="Jungle mural, finished" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p057-m.webp" srcset="../medias/photos/p057-s.webp 480w, ../medias/photos/p057-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Jungle mural, finished" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural, finished</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p024-l.webp" data-galerie="galerie" data-legende="Art deco palm mural" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p024-m.webp" srcset="../medias/photos/p024-s.webp 480w, ../medias/photos/p024-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Art deco palm mural" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Art deco palm mural</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p042-l.webp" data-galerie="galerie" data-legende="Child&#x27;s bedroom: car wallpaper and midnight-blue dado" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p042-m.webp" srcset="../medias/photos/p042-s.webp 480w, ../medias/photos/p042-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Child&#x27;s bedroom: car wallpaper and midnight-blue dado" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Child's bedroom: car wallpaper and midnight-blue dado</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p013-l.webp" data-galerie="galerie" data-legende="Living area with mouldings, walls and ceiling in white" data-largeur="1600" data-hauteur="1066">
+            <img src="../medias/photos/p013-m.webp" srcset="../medias/photos/p013-s.webp 480w, ../medias/photos/p013-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="640" alt="Living area with mouldings, walls and ceiling in white" loading="eager" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Living area with mouldings, walls and ceiling in white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p034-l.webp" data-galerie="galerie" data-legende="Forest mural in an entrance hall" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p034-m.webp" srcset="../medias/photos/p034-s.webp 480w, ../medias/photos/p034-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Forest mural in an entrance hall" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Forest mural in an entrance hall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p016-l.webp" data-galerie="galerie" data-legende="Vertical garden wallpaper above a midnight-blue dado" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p016-m.webp" srcset="../medias/photos/p016-s.webp 480w, ../medias/photos/p016-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Vertical garden wallpaper above a midnight-blue dado" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Vertical garden wallpaper above a midnight-blue dado</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v009.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v009-affiche.webp" data-legende="Hanging a tropical foliage wallpaper" data-largeur="576" data-hauteur="1280">
+            <img src="../medias/videos/v009-vignette.webp" srcset="../medias/videos/v009-vignette.webp 360w, ../medias/videos/v009-affiche.webp 576w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="800" alt="Video: Hanging a tropical foliage wallpaper" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:07</span>
+            <span class="tuile-legende">Hanging a tropical foliage wallpaper</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p053-l.webp" data-galerie="galerie" data-legende="Illustrated mural, finished" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p053-m.webp" srcset="../medias/photos/p053-s.webp 480w, ../medias/photos/p053-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Illustrated mural, finished" loading="eager" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Illustrated mural, finished</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p015-l.webp" data-galerie="galerie" data-legende="Flat: teal and midnight-blue walls" data-largeur="980" data-hauteur="1600">
+            <img src="../medias/photos/p015-m.webp" srcset="../medias/photos/p015-s.webp 480w, ../medias/photos/p015-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1567" alt="Flat: teal and midnight-blue walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Flat: teal and midnight-blue walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p038-l.webp" data-galerie="galerie" data-legende="Arched mural behind timber batten cladding" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p038-m.webp" srcset="../medias/photos/p038-s.webp 480w, ../medias/photos/p038-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Arched mural behind timber batten cladding" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Arched mural behind timber batten cladding</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p014-l.webp" data-galerie="galerie" data-legende="Double doors and moulded woodwork repainted" data-largeur="1600" data-hauteur="1066">
+            <img src="../medias/photos/p014-m.webp" srcset="../medias/photos/p014-s.webp 480w, ../medias/photos/p014-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="640" alt="Double doors and moulded woodwork repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Double doors and moulded woodwork repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p044-l.webp" data-galerie="galerie" data-legende="Colourful jungle mural, full view" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p044-m.webp" srcset="../medias/photos/p044-s.webp 480w, ../medias/photos/p044-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Colourful jungle mural, full view" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Colourful jungle mural, full view</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p019-l.webp" data-galerie="galerie" data-legende="Restaurant area, full view" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p019-m.webp" srcset="../medias/photos/p019-s.webp 480w, ../medias/photos/p019-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Restaurant area, full view" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Restaurant area, full view</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p046-l.webp" data-galerie="galerie" data-legende="Staircase wall covered with a black and white mural" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p046-m.webp" srcset="../medias/photos/p046-s.webp 480w, ../medias/photos/p046-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Staircase wall covered with a black and white mural" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Staircase wall covered with a black and white mural</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p160-l.webp" data-galerie="galerie" data-legende="Varnished wooden staircase" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p160-m.webp" srcset="../medias/photos/p160-s.webp 480w, ../medias/photos/p160-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Varnished wooden staircase" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Varnished wooden staircase</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v003.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v003-affiche.webp" data-legende="Offices: hanging a patterned wallcovering" data-largeur="390" data-hauteur="850">
+            <img src="../medias/videos/v003-vignette.webp" srcset="../medias/videos/v003-vignette.webp 360w, ../medias/videos/v003-affiche.webp 390w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="785" alt="Video: Offices: hanging a patterned wallcovering" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:29</span>
+            <span class="tuile-legende">Offices: hanging a patterned wallcovering</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p029-l.webp" data-galerie="galerie" data-legende="Large-leaf wallpaper in terracotta and midnight blue" data-largeur="1600" data-hauteur="774">
+            <img src="../medias/photos/p029-m.webp" srcset="../medias/photos/p029-s.webp 480w, ../medias/photos/p029-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="465" alt="Large-leaf wallpaper in terracotta and midnight blue" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Large-leaf wallpaper in terracotta and midnight blue</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p036-l.webp" data-galerie="galerie" data-legende="Forest mural on a large wall" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p036-m.webp" srcset="../medias/photos/p036-s.webp 480w, ../medias/photos/p036-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Forest mural on a large wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Forest mural on a large wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p048-l.webp" data-galerie="galerie" data-legende="Deep blue wallpaper in a stairwell" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p048-m.webp" srcset="../medias/photos/p048-s.webp 480w, ../medias/photos/p048-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Deep blue wallpaper in a stairwell" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Deep blue wallpaper in a stairwell</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p017-l.webp" data-galerie="galerie" data-legende="Restaurant area: geometric decor and painted walls" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p017-m.webp" srcset="../medias/photos/p017-s.webp 480w, ../medias/photos/p017-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Restaurant area: geometric decor and painted walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Restaurant area: geometric decor and painted walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p056-l.webp" data-galerie="galerie" data-legende="Jungle mural: elephant and giraffes" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p056-m.webp" srcset="../medias/photos/p056-s.webp 480w, ../medias/photos/p056-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Jungle mural: elephant and giraffes" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural: elephant and giraffes</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p075-l.webp" data-galerie="galerie" data-legende="Hallway repainted, light doors and walls" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p075-m.webp" srcset="../medias/photos/p075-s.webp 480w, ../medias/photos/p075-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Hallway repainted, light doors and walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Hallway repainted, light doors and walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p021-l.webp" data-galerie="galerie" data-legende="Embossed patterned wallcovering" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p021-m.webp" srcset="../medias/photos/p021-s.webp 480w, ../medias/photos/p021-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Embossed patterned wallcovering" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Embossed patterned wallcovering</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p022-l.webp" data-galerie="galerie" data-legende="Wall covered with an embossed patterned wallcovering" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p022-m.webp" srcset="../medias/photos/p022-s.webp 480w, ../medias/photos/p022-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Wall covered with an embossed patterned wallcovering" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Wall covered with an embossed patterned wallcovering</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v178.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v178-affiche.webp" data-legende="Finished house: bright living area" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v178-vignette.webp" srcset="../medias/videos/v178-vignette.webp 360w, ../medias/videos/v178-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: Finished house: bright living area" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:57</span>
+            <span class="tuile-legende">Finished house: bright living area</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p025-l.webp" data-galerie="galerie" data-legende="Art deco mural: pattern detail" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p025-m.webp" srcset="../medias/photos/p025-s.webp 480w, ../medias/photos/p025-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Art deco mural: pattern detail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Art deco mural: pattern detail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p026-l.webp" data-galerie="galerie" data-legende="Art deco mural, front view" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p026-m.webp" srcset="../medias/photos/p026-s.webp 480w, ../medias/photos/p026-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Art deco mural, front view" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Art deco mural, front view</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p027-l.webp" data-galerie="galerie" data-legende="Hanging the art deco mural, stepladder in place" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p027-m.webp" srcset="../medias/photos/p027-s.webp 480w, ../medias/photos/p027-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Hanging the art deco mural, stepladder in place" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Hanging the art deco mural, stepladder in place</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p028-l.webp" data-galerie="galerie" data-legende="Art deco mural: side view" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p028-m.webp" srcset="../medias/photos/p028-s.webp 480w, ../medias/photos/p028-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Art deco mural: side view" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Art deco mural: side view</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p030-l.webp" data-galerie="galerie" data-legende="Large terracotta leaves: job finished" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p030-m.webp" srcset="../medias/photos/p030-s.webp 480w, ../medias/photos/p030-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Large terracotta leaves: job finished" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Large terracotta leaves: job finished</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p031-l.webp" data-galerie="galerie" data-legende="Blue patterned wallpaper in a room under renovation" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p031-m.webp" srcset="../medias/photos/p031-s.webp 480w, ../medias/photos/p031-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Blue patterned wallpaper in a room under renovation" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Blue patterned wallpaper in a room under renovation</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p032-l.webp" data-galerie="galerie" data-legende="Hanging the blue patterned wallpaper, floor protected" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p032-m.webp" srcset="../medias/photos/p032-s.webp 480w, ../medias/photos/p032-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Hanging the blue patterned wallpaper, floor protected" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Hanging the blue patterned wallpaper, floor protected</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p033-l.webp" data-galerie="galerie" data-legende="Blue patterned wallpaper behind a timber frame" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p033-m.webp" srcset="../medias/photos/p033-s.webp 480w, ../medias/photos/p033-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Blue patterned wallpaper behind a timber frame" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Blue patterned wallpaper behind a timber frame</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v171.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v171-affiche.webp" data-legende="Finished flat: entrance and hallways" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v171-vignette.webp" srcset="../medias/videos/v171-vignette.webp 360w, ../medias/videos/v171-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: Finished flat: entrance and hallways" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:38</span>
+            <span class="tuile-legende">Finished flat: entrance and hallways</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p035-l.webp" data-galerie="galerie" data-legende="Forest mural, seen from the doorway" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p035-m.webp" srcset="../medias/photos/p035-s.webp 480w, ../medias/photos/p035-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Forest mural, seen from the doorway" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Forest mural, seen from the doorway</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p037-l.webp" data-galerie="galerie" data-legende="Forest mural: hanging the last strips" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p037-m.webp" srcset="../medias/photos/p037-s.webp 480w, ../medias/photos/p037-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Forest mural: hanging the last strips" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Forest mural: hanging the last strips</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p041-l.webp" data-galerie="galerie" data-legende="Arched mural strips laid out before hanging" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p041-m.webp" srcset="../medias/photos/p041-s.webp 480w, ../medias/photos/p041-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Arched mural strips laid out before hanging" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Arched mural strips laid out before hanging</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p043-l.webp" data-galerie="galerie" data-legende="Colourful jungle mural between two yellow walls" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p043-m.webp" srcset="../medias/photos/p043-s.webp 480w, ../medias/photos/p043-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Colourful jungle mural between two yellow walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Colourful jungle mural between two yellow walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p047-l.webp" data-galerie="galerie" data-legende="Black and white mural covering the full height of the staircase" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p047-m.webp" srcset="../medias/photos/p047-s.webp 480w, ../medias/photos/p047-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Black and white mural covering the full height of the staircase" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Black and white mural covering the full height of the staircase</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p049-l.webp" data-galerie="galerie" data-legende="Deep blue wallpaper: pattern matching" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p049-m.webp" srcset="../medias/photos/p049-s.webp 480w, ../medias/photos/p049-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Deep blue wallpaper: pattern matching" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Deep blue wallpaper: pattern matching</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p050-l.webp" data-galerie="galerie" data-legende="Hanging the blue wallpaper around a door" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p050-m.webp" srcset="../medias/photos/p050-s.webp 480w, ../medias/photos/p050-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Hanging the blue wallpaper around a door" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Hanging the blue wallpaper around a door</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p051-l.webp" data-galerie="galerie" data-legende="Blue wallpaper: finishing around the door frame" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p051-m.webp" srcset="../medias/photos/p051-s.webp 480w, ../medias/photos/p051-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Blue wallpaper: finishing around the door frame" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Blue wallpaper: finishing around the door frame</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v005.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v005-affiche.webp" data-legende="Shop: geometric decor and painted areas" data-largeur="390" data-hauteur="850">
+            <img src="../medias/videos/v005-vignette.webp" srcset="../medias/videos/v005-vignette.webp 360w, ../medias/videos/v005-affiche.webp 390w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="785" alt="Video: Shop: geometric decor and painted areas" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:59</span>
+            <span class="tuile-legende">Shop: geometric decor and painted areas</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p052-l.webp" data-galerie="galerie" data-legende="Illustrated mural being hung" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p052-m.webp" srcset="../medias/photos/p052-s.webp 480w, ../medias/photos/p052-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Illustrated mural being hung" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Illustrated mural being hung</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p054-l.webp" data-galerie="galerie" data-legende="Illustrated mural: detail" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p054-m.webp" srcset="../medias/photos/p054-s.webp 480w, ../medias/photos/p054-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Illustrated mural: detail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Illustrated mural: detail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p055-l.webp" data-galerie="galerie" data-legende="Wall painted black before the mural was finished" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p055-m.webp" srcset="../medias/photos/p055-s.webp 480w, ../medias/photos/p055-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Wall painted black before the mural was finished" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Wall painted black before the mural was finished</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p058-l.webp" data-galerie="galerie" data-legende="First strip of the jungle mural" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p058-m.webp" srcset="../medias/photos/p058-s.webp 480w, ../medias/photos/p058-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="First strip of the jungle mural" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">First strip of the jungle mural</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p059-l.webp" data-galerie="galerie" data-legende="Hanging the jungle mural strip by strip" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p059-m.webp" srcset="../medias/photos/p059-s.webp 480w, ../medias/photos/p059-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Hanging the jungle mural strip by strip" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Hanging the jungle mural strip by strip</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p060-l.webp" data-galerie="galerie" data-legende="Jungle mural in the light" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p060-m.webp" srcset="../medias/photos/p060-s.webp 480w, ../medias/photos/p060-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Jungle mural in the light" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural in the light</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p061-l.webp" data-galerie="galerie" data-legende="Jungle mural rolled out on the floor before hanging" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p061-m.webp" srcset="../medias/photos/p061-s.webp 480w, ../medias/photos/p061-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Jungle mural rolled out on the floor before hanging" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural rolled out on the floor before hanging</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p062-l.webp" data-galerie="galerie" data-legende="Jungle mural strips prepared on the floor" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p062-m.webp" srcset="../medias/photos/p062-s.webp 480w, ../medias/photos/p062-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Jungle mural strips prepared on the floor" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural strips prepared on the floor</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v004.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v004-affiche.webp" data-legende="Shop: mezzanine and staircase repainted" data-largeur="576" data-hauteur="1280">
+            <img src="../medias/videos/v004-vignette.webp" srcset="../medias/videos/v004-vignette.webp 360w, ../medias/videos/v004-affiche.webp 576w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="800" alt="Video: Shop: mezzanine and staircase repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Shop: mezzanine and staircase repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p063-l.webp" data-galerie="galerie" data-legende="Jungle mural: checking the joins before hanging" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p063-m.webp" srcset="../medias/photos/p063-s.webp 480w, ../medias/photos/p063-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Jungle mural: checking the joins before hanging" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural: checking the joins before hanging</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p064-l.webp" data-galerie="galerie" data-legende="Jungle mural: elephant detail" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p064-m.webp" srcset="../medias/photos/p064-s.webp 480w, ../medias/photos/p064-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Jungle mural: elephant detail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Jungle mural: elephant detail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p110-l.webp" data-galerie="galerie" data-legende="Lightly patterned wallpaper on a bedroom wall" data-largeur="1600" data-hauteur="774">
+            <img src="../medias/photos/p110-m.webp" srcset="../medias/photos/p110-s.webp 480w, ../medias/photos/p110-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="465" alt="Lightly patterned wallpaper on a bedroom wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Lightly patterned wallpaper on a bedroom wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="papier-peint" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p194-l.webp" data-galerie="galerie" data-legende="Wallpaper over the full height of a mezzanine" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p194-m.webp" srcset="../medias/photos/p194-s.webp 480w, ../medias/photos/p194-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Wallpaper over the full height of a mezzanine" loading="lazy" decoding="async">
+            <span class="tuile-cat">Wallpaper</span>
+            <span class="tuile-legende">Wallpaper over the full height of a mezzanine</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p011-l.webp" data-galerie="galerie" data-legende="Kitchen: walls repainted in a pinkish grey" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p011-m.webp" srcset="../medias/photos/p011-s.webp 480w, ../medias/photos/p011-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Kitchen: walls repainted in a pinkish grey" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Kitchen: walls repainted in a pinkish grey</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p012-l.webp" data-galerie="galerie" data-legende="Kitchen: walls and ceiling repainted" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p012-m.webp" srcset="../medias/photos/p012-s.webp 480w, ../medias/photos/p012-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Kitchen: walls and ceiling repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Kitchen: walls and ceiling repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p018-l.webp" data-galerie="galerie" data-legende="Kitchen: walls repainted white around the columns" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p018-m.webp" srcset="../medias/photos/p018-s.webp 480w, ../medias/photos/p018-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Kitchen: walls repainted white around the columns" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Kitchen: walls repainted white around the columns</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p039-l.webp" data-galerie="galerie" data-legende="Kitchen: beige wall being painted" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p039-m.webp" srcset="../medias/photos/p039-s.webp 480w, ../medias/photos/p039-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Kitchen: beige wall being painted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Kitchen: beige wall being painted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v007.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v007-affiche.webp" data-legende="Stairwell repainted" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v007-vignette.webp" srcset="../medias/videos/v007-vignette.webp 360w, ../medias/videos/v007-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: Stairwell repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Stairwell repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p040-l.webp" data-galerie="galerie" data-legende="Finished kitchen, beige wall and black window" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p040-m.webp" srcset="../medias/photos/p040-s.webp 480w, ../medias/photos/p040-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Finished kitchen, beige wall and black window" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Finished kitchen, beige wall and black window</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p045-l.webp" data-galerie="galerie" data-legende="Child&#x27;s bedroom before hanging: midnight-blue dado" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p045-m.webp" srcset="../medias/photos/p045-s.webp 480w, ../medias/photos/p045-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Child&#x27;s bedroom before hanging: midnight-blue dado" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Child's bedroom before hanging: midnight-blue dado</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p076-l.webp" data-galerie="galerie" data-legende="Moulded door repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p076-m.webp" srcset="../medias/photos/p076-s.webp 480w, ../medias/photos/p076-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Moulded door repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Moulded door repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p080-l.webp" data-galerie="galerie" data-legende="Room repainted white, glazed door" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p080-m.webp" srcset="../medias/photos/p080-s.webp 480w, ../medias/photos/p080-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Room repainted white, glazed door" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Room repainted white, glazed door</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p081-l.webp" data-galerie="galerie" data-legende="White walls and glazed doors repainted" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p081-m.webp" srcset="../medias/photos/p081-s.webp 480w, ../medias/photos/p081-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="White walls and glazed doors repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">White walls and glazed doors repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p082-l.webp" data-galerie="galerie" data-legende="Orange-red wall and skirting boards repainted" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p082-m.webp" srcset="../medias/photos/p082-s.webp 480w, ../medias/photos/p082-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Orange-red wall and skirting boards repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Orange-red wall and skirting boards repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p083-l.webp" data-galerie="galerie" data-legende="Glazed sliding door lacquered red" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p083-m.webp" srcset="../medias/photos/p083-s.webp 480w, ../medias/photos/p083-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Glazed sliding door lacquered red" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Glazed sliding door lacquered red</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p084-l.webp" data-galerie="galerie" data-legende="Red lacquered sliding door: rail detail" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p084-m.webp" srcset="../medias/photos/p084-s.webp 480w, ../medias/photos/p084-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Red lacquered sliding door: rail detail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Red lacquered sliding door: rail detail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v006.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v006-affiche.webp" data-legende="Residence: corridors and inner courtyard" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v006-vignette.webp" srcset="../medias/videos/v006-vignette.webp 360w, ../medias/videos/v006-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: Residence: corridors and inner courtyard" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:10</span>
+            <span class="tuile-legende">Residence: corridors and inner courtyard</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p085-l.webp" data-galerie="galerie" data-legende="Radiator and wall repainted" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p085-m.webp" srcset="../medias/photos/p085-s.webp 480w, ../medias/photos/p085-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Radiator and wall repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Radiator and wall repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p086-l.webp" data-galerie="galerie" data-legende="Corridor in a public building, repainted" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p086-m.webp" srcset="../medias/photos/p086-s.webp 480w, ../medias/photos/p086-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Corridor in a public building, repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Corridor in a public building, repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p099-l.webp" data-galerie="galerie" data-legende="Ceiling redone, smooth and repainted" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p099-m.webp" srcset="../medias/photos/p099-s.webp 480w, ../medias/photos/p099-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Ceiling redone, smooth and repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Ceiling redone, smooth and repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p100-l.webp" data-galerie="galerie" data-legende="Smooth ceiling after repair" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p100-m.webp" srcset="../medias/photos/p100-s.webp 480w, ../medias/photos/p100-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Smooth ceiling after repair" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Smooth ceiling after repair</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p103-l.webp" data-galerie="galerie" data-legende="Room repainted, light walls and French windows" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p103-m.webp" srcset="../medias/photos/p103-s.webp 480w, ../medias/photos/p103-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Room repainted, light walls and French windows" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Room repainted, light walls and French windows</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p111-l.webp" data-galerie="galerie" data-legende="Wooden staircase and walls repainted" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p111-m.webp" srcset="../medias/photos/p111-s.webp 480w, ../medias/photos/p111-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Wooden staircase and walls repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Wooden staircase and walls repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p130-l.webp" data-galerie="galerie" data-legende="Brick-slip wall repainted" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p130-m.webp" srcset="../medias/photos/p130-s.webp 480w, ../medias/photos/p130-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Brick-slip wall repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Brick-slip wall repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p131-l.webp" data-galerie="galerie" data-legende="Low brick-slip wall and worktop" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p131-m.webp" srcset="../medias/photos/p131-s.webp 480w, ../medias/photos/p131-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Low brick-slip wall and worktop" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Low brick-slip wall and worktop</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v002.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v002-affiche.webp" data-legende="House under renovation: tour of the site" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v002-vignette.webp" srcset="../medias/videos/v002-vignette.webp 360w, ../medias/videos/v002-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: House under renovation: tour of the site" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:56</span>
+            <span class="tuile-legende">House under renovation: tour of the site</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p161-l.webp" data-galerie="galerie" data-legende="Wooden staircase: varnished treads" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p161-m.webp" srcset="../medias/photos/p161-s.webp 480w, ../medias/photos/p161-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Wooden staircase: varnished treads" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Wooden staircase: varnished treads</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p162-l.webp" data-galerie="galerie" data-legende="Varnished wooden treads" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p162-m.webp" srcset="../medias/photos/p162-s.webp 480w, ../medias/photos/p162-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Varnished wooden treads" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Varnished wooden treads</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p166-l.webp" data-galerie="galerie" data-legende="Underside of the stairs and walls repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p166-m.webp" srcset="../medias/photos/p166-s.webp 480w, ../medias/photos/p166-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Underside of the stairs and walls repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Underside of the stairs and walls repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p167-l.webp" data-galerie="galerie" data-legende="Staircase and walls repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p167-m.webp" srcset="../medias/photos/p167-s.webp 480w, ../medias/photos/p167-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Staircase and walls repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Staircase and walls repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p168-l.webp" data-galerie="galerie" data-legende="Bedroom repainted white" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p168-m.webp" srcset="../medias/photos/p168-s.webp 480w, ../medias/photos/p168-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Bedroom repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Bedroom repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p169-l.webp" data-galerie="galerie" data-legende="Loft bedroom repainted white" data-largeur="1536" data-hauteur="1393">
+            <img src="../medias/photos/p169-m.webp" srcset="../medias/photos/p169-s.webp 480w, ../medias/photos/p169-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="871" alt="Loft bedroom repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Loft bedroom repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p170-l.webp" data-galerie="galerie" data-legende="Wall and ceiling repainted white" data-largeur="1536" data-hauteur="1536">
+            <img src="../medias/photos/p170-m.webp" srcset="../medias/photos/p170-s.webp 480w, ../medias/photos/p170-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="960" alt="Wall and ceiling repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Wall and ceiling repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p172-l.webp" data-galerie="galerie" data-legende="Ceiling and bulkhead repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p172-m.webp" srcset="../medias/photos/p172-s.webp 480w, ../medias/photos/p172-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Ceiling and bulkhead repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Ceiling and bulkhead repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="video">
+          <a class="tuile-lien" href="../medias/videos/v088.mp4" data-galerie="galerie" data-type="video" data-affiche="../medias/videos/v088-affiche.webp" data-legende="Renovating a house: walls, ceilings and roof timbers" data-largeur="478" data-hauteur="850">
+            <img src="../medias/videos/v088-vignette.webp" srcset="../medias/videos/v088-vignette.webp 360w, ../medias/videos/v088-affiche.webp 478w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="360" height="640" alt="Video: Renovating a house: walls, ceilings and roof timbers" loading="lazy" decoding="async">
+            <span class="tuile-cat">Video</span><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">1:59</span>
+            <span class="tuile-legende">Renovating a house: walls, ceilings and roof timbers</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p173-l.webp" data-galerie="galerie" data-legende="Ceiling and beam repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p173-m.webp" srcset="../medias/photos/p173-s.webp 480w, ../medias/photos/p173-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Ceiling and beam repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Ceiling and beam repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p180-l.webp" data-galerie="galerie" data-legende="Hallway repainted, light walls" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p180-m.webp" srcset="../medias/photos/p180-s.webp 480w, ../medias/photos/p180-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Hallway repainted, light walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Hallway repainted, light walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p181-l.webp" data-galerie="galerie" data-legende="Toilet: powder-pink wall" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p181-m.webp" srcset="../medias/photos/p181-s.webp 480w, ../medias/photos/p181-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Toilet: powder-pink wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Toilet: powder-pink wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p185-l.webp" data-galerie="galerie" data-legende="Door and wall repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p185-m.webp" srcset="../medias/photos/p185-s.webp 480w, ../medias/photos/p185-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Door and wall repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Door and wall repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p186-l.webp" data-galerie="galerie" data-legende="Door and frame repainted" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p186-m.webp" srcset="../medias/photos/p186-s.webp 480w, ../medias/photos/p186-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Door and frame repainted" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Door and frame repainted</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p187-l.webp" data-galerie="galerie" data-legende="Moulded doors repainted white" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p187-m.webp" srcset="../medias/photos/p187-s.webp 480w, ../medias/photos/p187-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Moulded doors repainted white" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Moulded doors repainted white</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p195-l.webp" data-galerie="galerie" data-legende="Wooden beams and a pale aqua band" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p195-m.webp" srcset="../medias/photos/p195-s.webp 480w, ../medias/photos/p195-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Wooden beams and a pale aqua band" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">Wooden beams and a pale aqua band</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="peinture" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p196-l.webp" data-galerie="galerie" data-legende="White ceiling, beams and a pale aqua band" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p196-m.webp" srcset="../medias/photos/p196-s.webp 480w, ../medias/photos/p196-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="White ceiling, beams and a pale aqua band" loading="lazy" decoding="async">
+            <span class="tuile-cat">Painting</span>
+            <span class="tuile-legende">White ceiling, beams and a pale aqua band</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p020-l.webp" data-galerie="galerie" data-legende="Large open space under renovation, floors protected" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p020-m.webp" srcset="../medias/photos/p020-s.webp 480w, ../medias/photos/p020-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Large open space under renovation, floors protected" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Large open space under renovation, floors protected</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p071-l.webp" data-galerie="galerie" data-legende="Before: plaster coming away in a stairwell" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p071-m.webp" srcset="../medias/photos/p071-s.webp 480w, ../medias/photos/p071-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: plaster coming away in a stairwell" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: plaster coming away in a stairwell</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p072-l.webp" data-galerie="galerie" data-legende="Before: damaged wall along a handrail" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p072-m.webp" srcset="../medias/photos/p072-s.webp 480w, ../medias/photos/p072-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: damaged wall along a handrail" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged wall along a handrail</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p073-l.webp" data-galerie="galerie" data-legende="Ceiling and walls filled, ready for painting" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p073-m.webp" srcset="../medias/photos/p073-s.webp 480w, ../medias/photos/p073-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Ceiling and walls filled, ready for painting" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling and walls filled, ready for painting</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p074-l.webp" data-galerie="galerie" data-legende="Hallway under renovation, filler sanded" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p074-m.webp" srcset="../medias/photos/p074-s.webp 480w, ../medias/photos/p074-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Hallway under renovation, filler sanded" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Hallway under renovation, filler sanded</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p077-l.webp" data-galerie="galerie" data-legende="Shower room prepared before painting" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p077-m.webp" srcset="../medias/photos/p077-s.webp 480w, ../medias/photos/p077-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Shower room prepared before painting" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Shower room prepared before painting</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p078-l.webp" data-galerie="galerie" data-legende="Before: damaged wall under a window" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p078-m.webp" srcset="../medias/photos/p078-s.webp 480w, ../medias/photos/p078-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: damaged wall under a window" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged wall under a window</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p079-l.webp" data-galerie="galerie" data-legende="Before: plaster coming away under a window" data-largeur="1600" data-hauteur="1200">
+            <img src="../medias/photos/p079-m.webp" srcset="../medias/photos/p079-s.webp 480w, ../medias/photos/p079-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="720" alt="Before: plaster coming away under a window" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: plaster coming away under a window</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p087-l.webp" data-galerie="galerie" data-legende="Window reveal being prepared" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p087-m.webp" srcset="../medias/photos/p087-s.webp 480w, ../medias/photos/p087-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Window reveal being prepared" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Window reveal being prepared</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p089-l.webp" data-galerie="galerie" data-legende="Before: cracks in the ceiling" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p089-m.webp" srcset="../medias/photos/p089-s.webp 480w, ../medias/photos/p089-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: cracks in the ceiling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: cracks in the ceiling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p090-l.webp" data-galerie="galerie" data-legende="Before: cracked ceiling near the windows" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p090-m.webp" srcset="../medias/photos/p090-s.webp 480w, ../medias/photos/p090-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Before: cracked ceiling near the windows" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: cracked ceiling near the windows</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p091-l.webp" data-galerie="galerie" data-legende="Ceiling crack opened up before filling" data-largeur="1152" data-hauteur="1434">
+            <img src="../medias/photos/p091-m.webp" srcset="../medias/photos/p091-s.webp 480w, ../medias/photos/p091-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1195" alt="Ceiling crack opened up before filling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling crack opened up before filling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p092-l.webp" data-galerie="galerie" data-legende="Ceiling crack opened up and treated" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p092-m.webp" srcset="../medias/photos/p092-s.webp 480w, ../medias/photos/p092-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Ceiling crack opened up and treated" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling crack opened up and treated</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p093-l.webp" data-galerie="galerie" data-legende="Loft: jointing tape and filler on plasterboard" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p093-m.webp" srcset="../medias/photos/p093-s.webp 480w, ../medias/photos/p093-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Loft: jointing tape and filler on plasterboard" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Loft: jointing tape and filler on plasterboard</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p094-l.webp" data-galerie="galerie" data-legende="Loft: plasterboard joints filled" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p094-m.webp" srcset="../medias/photos/p094-s.webp 480w, ../medias/photos/p094-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Loft: plasterboard joints filled" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Loft: plasterboard joints filled</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p095-l.webp" data-galerie="galerie" data-legende="Loft: exposed roof timbers and filled ceiling" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p095-m.webp" srcset="../medias/photos/p095-s.webp 480w, ../medias/photos/p095-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Loft: exposed roof timbers and filled ceiling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Loft: exposed roof timbers and filled ceiling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p096-l.webp" data-galerie="galerie" data-legende="Before: damaged wall behind a piece of furniture" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p096-m.webp" srcset="../medias/photos/p096-s.webp 480w, ../medias/photos/p096-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: damaged wall behind a piece of furniture" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged wall behind a piece of furniture</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p097-l.webp" data-galerie="galerie" data-legende="Before: damp marks in a corner" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p097-m.webp" srcset="../medias/photos/p097-s.webp 480w, ../medias/photos/p097-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: damp marks in a corner" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damp marks in a corner</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p098-l.webp" data-galerie="galerie" data-legende="Before: flaking ceiling" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p098-m.webp" srcset="../medias/photos/p098-s.webp 480w, ../medias/photos/p098-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Before: flaking ceiling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: flaking ceiling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p101-l.webp" data-galerie="galerie" data-legende="Before: collapsed ceiling, laths exposed" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p101-m.webp" srcset="../medias/photos/p101-s.webp 480w, ../medias/photos/p101-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: collapsed ceiling, laths exposed" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: collapsed ceiling, laths exposed</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p102-l.webp" data-galerie="galerie" data-legende="Before: ceiling cracked down to the laths" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p102-m.webp" srcset="../medias/photos/p102-s.webp 480w, ../medias/photos/p102-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: ceiling cracked down to the laths" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: ceiling cracked down to the laths</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p104-l.webp" data-galerie="galerie" data-legende="Before: kitchen with damaged orange walls" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p104-m.webp" srcset="../medias/photos/p104-s.webp 480w, ../medias/photos/p104-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Before: kitchen with damaged orange walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: kitchen with damaged orange walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p105-l.webp" data-galerie="galerie" data-legende="Before: cracked kitchen wall" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p105-m.webp" srcset="../medias/photos/p105-s.webp 480w, ../medias/photos/p105-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Before: cracked kitchen wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: cracked kitchen wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p106-l.webp" data-galerie="galerie" data-legende="Before: orange door and wall" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p106-m.webp" srcset="../medias/photos/p106-s.webp 480w, ../medias/photos/p106-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Before: orange door and wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: orange door and wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p109-l.webp" data-galerie="galerie" data-legende="Wall filled, floor protected" data-largeur="1047" data-hauteur="1600">
+            <img src="../medias/photos/p109-m.webp" srcset="../medias/photos/p109-s.webp 480w, ../medias/photos/p109-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1468" alt="Wall filled, floor protected" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Wall filled, floor protected</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p127-l.webp" data-galerie="galerie" data-legende="Before: damaged wall, ladders in place" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p127-m.webp" srcset="../medias/photos/p127-s.webp 480w, ../medias/photos/p127-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: damaged wall, ladders in place" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged wall, ladders in place</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p128-l.webp" data-galerie="galerie" data-legende="Before: wall opened up near a window" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p128-m.webp" srcset="../medias/photos/p128-s.webp 480w, ../medias/photos/p128-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: wall opened up near a window" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: wall opened up near a window</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p129-l.webp" data-galerie="galerie" data-legende="Wall being finished, filler and paint" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p129-m.webp" srcset="../medias/photos/p129-s.webp 480w, ../medias/photos/p129-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Wall being finished, filler and paint" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Wall being finished, filler and paint</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p151-l.webp" data-galerie="galerie" data-legende="Before: blistered plaster" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p151-m.webp" srcset="../medias/photos/p151-s.webp 480w, ../medias/photos/p151-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: blistered plaster" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: blistered plaster</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p152-l.webp" data-galerie="galerie" data-legende="Before: crack above a door" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p152-m.webp" srcset="../medias/photos/p152-s.webp 480w, ../medias/photos/p152-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: crack above a door" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: crack above a door</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p153-l.webp" data-galerie="galerie" data-legende="Before: crack and patched plaster" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p153-m.webp" srcset="../medias/photos/p153-s.webp 480w, ../medias/photos/p153-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: crack and patched plaster" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: crack and patched plaster</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p154-l.webp" data-galerie="galerie" data-legende="Before: flaking bathroom ceiling" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p154-m.webp" srcset="../medias/photos/p154-s.webp 480w, ../medias/photos/p154-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Before: flaking bathroom ceiling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: flaking bathroom ceiling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p155-l.webp" data-galerie="galerie" data-legende="Before: damaged bathroom ceiling" data-largeur="1600" data-hauteur="1032">
+            <img src="../medias/photos/p155-m.webp" srcset="../medias/photos/p155-s.webp 480w, ../medias/photos/p155-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="619" alt="Before: damaged bathroom ceiling" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged bathroom ceiling</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p156-l.webp" data-galerie="galerie" data-legende="Before: hole in a ceiling, measured before repair" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p156-m.webp" srcset="../medias/photos/p156-s.webp 480w, ../medias/photos/p156-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: hole in a ceiling, measured before repair" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: hole in a ceiling, measured before repair</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p157-l.webp" data-galerie="galerie" data-legende="Before: flaking ceiling above a shower" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p157-m.webp" srcset="../medias/photos/p157-s.webp 480w, ../medias/photos/p157-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Before: flaking ceiling above a shower" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: flaking ceiling above a shower</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p158-l.webp" data-galerie="galerie" data-legende="Ceiling filled, ready to paint" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p158-m.webp" srcset="../medias/photos/p158-s.webp 480w, ../medias/photos/p158-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Ceiling filled, ready to paint" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling filled, ready to paint</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p159-l.webp" data-galerie="galerie" data-legende="Ceiling cracks filled" data-largeur="1396" data-hauteur="1600">
+            <img src="../medias/photos/p159-m.webp" srcset="../medias/photos/p159-s.webp 480w, ../medias/photos/p159-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1101" alt="Ceiling cracks filled" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling cracks filled</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p174-l.webp" data-galerie="galerie" data-legende="Before: damaged wall near the floor" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p174-m.webp" srcset="../medias/photos/p174-s.webp 480w, ../medias/photos/p174-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: damaged wall near the floor" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: damaged wall near the floor</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p175-l.webp" data-galerie="galerie" data-legende="Before: plaster patch on a corner" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p175-m.webp" srcset="../medias/photos/p175-s.webp 480w, ../medias/photos/p175-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: plaster patch on a corner" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: plaster patch on a corner</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p176-l.webp" data-galerie="galerie" data-legende="Before: crack above a glazed door" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p176-m.webp" srcset="../medias/photos/p176-s.webp 480w, ../medias/photos/p176-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Before: crack above a glazed door" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: crack above a glazed door</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p177-l.webp" data-galerie="galerie" data-legende="Crack opened up and filled above a door" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p177-m.webp" srcset="../medias/photos/p177-s.webp 480w, ../medias/photos/p177-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Crack opened up and filled above a door" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Crack opened up and filled above a door</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p179-l.webp" data-galerie="galerie" data-legende="Wall treated before painting" data-largeur="1200" data-hauteur="1600">
+            <img src="../medias/photos/p179-m.webp" srcset="../medias/photos/p179-s.webp 480w, ../medias/photos/p179-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1280" alt="Wall treated before painting" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Wall treated before painting</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p182-l.webp" data-galerie="galerie" data-legende="Before: hole in a wall" data-largeur="1536" data-hauteur="1352">
+            <img src="../medias/photos/p182-m.webp" srcset="../medias/photos/p182-s.webp 480w, ../medias/photos/p182-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="845" alt="Before: hole in a wall" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: hole in a wall</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p183-l.webp" data-galerie="galerie" data-legende="Before: duct and ceiling in a utility room" data-largeur="1536" data-hauteur="901">
+            <img src="../medias/photos/p183-m.webp" srcset="../medias/photos/p183-s.webp 480w, ../medias/photos/p183-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="563" alt="Before: duct and ceiling in a utility room" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: duct and ceiling in a utility room</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p188-l.webp" data-galerie="galerie" data-legende="Ceiling and beams being finished" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p188-m.webp" srcset="../medias/photos/p188-s.webp 480w, ../medias/photos/p188-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Ceiling and beams being finished" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Ceiling and beams being finished</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p189-l.webp" data-galerie="galerie" data-legende="Before: kitchen with bare walls" data-largeur="1600" data-hauteur="900">
+            <img src="../medias/photos/p189-m.webp" srcset="../medias/photos/p189-s.webp 480w, ../medias/photos/p189-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="540" alt="Before: kitchen with bare walls" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Before: kitchen with bare walls</span>
+          </a>
+        </li>
+        <li class="tuile" data-cat="renovation" data-type="photo">
+          <a class="tuile-lien" href="../medias/photos/p191-l.webp" data-galerie="galerie" data-legende="Loft: filler on plasterboard" data-largeur="900" data-hauteur="1600">
+            <img src="../medias/photos/p191-m.webp" srcset="../medias/photos/p191-s.webp 480w, ../medias/photos/p191-m.webp 960w" sizes="(min-width: 1240px) 280px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 48vw" width="960" height="1707" alt="Loft: filler on plasterboard" loading="lazy" decoding="async">
+            <span class="tuile-cat">Renovation</span>
+            <span class="tuile-legende">Loft: filler on plasterboard</span>
+          </a>
+        </li>
+    </ul>
+    <div class="galerie-plus"><button type="button" class="btn btn-contour" id="galerie-plus" hidden>Show more</button></div>
+  </div>
+</section>
+
+<section class="cta-bande" aria-labelledby="titre-cta">
+  <div class="enveloppe cta-grille">
+    <div>
+      <h2 id="titre-cta">Planning work on your walls?</h2>
+      <p>Sékou comes to see the surfaces and gives you a free, detailed quote.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-jaune" href="index.html#devis">Get a free quote</a>
+      <a class="btn btn-contour" href="tel:+33783440311"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call <span class="nowrap">+33 7 83 44 03 11</span></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied bande">
+  <div class="enveloppe">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="index.html" aria-label="Home">
+          <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+            <g transform="translate(20 36)">
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+              <circle class="logo-rivet" r="3.2"/>
+            </g>
+          </svg>
+          <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Painter &amp; decorator</span></span>
+        </a>
+        <p class="pied-intro">Painting, wallpaper murals, wall and ceiling repairs. Free quote after a visit.</p>
+      </div>
+      <div>
+        <p class="pied-titre">Site</p>
+        <ul>
+          <li><a href="index.html#prestations">Services</a></li>
+          <li><a href="realisations.html">Projects</a></li>
+          <li><a href="index.html#avant-apres">Before / after</a></li>
+          <li><a href="index.html#methode">Process</a></li>
+          <li><a href="index.html#questions">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied-titre">Contact</p>
+        <ul>
+          <li><span class="nowrap">+33 7 83 44 03 11</span></li>
+          <li>fissourousekou@gmail.com</li>
+          <li><a href="index.html#devis">Request a quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <details class="mentions">
+        <summary>Legal notice</summary>
+        <dl>
+          <dt>Publisher</dt><dd>Sékou Fissourou, painter and decorator</dd>
+          <dt>Status and SIRET number</dt><dd><span class="a-completer">to be completed</span></dd>
+          <dt>Address</dt><dd><span class="a-completer">to be completed</span></dd>
+          <dt>Contact</dt><dd><span class="nowrap">+33 7 83 44 03 11</span> · fissourousekou@gmail.com</dd>
+          <dt>Publication director</dt><dd>Sékou Fissourou</dd>
+          <dt>Hosting provider</dt><dd>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States · <span class="nowrap">+1 650 319 8930</span></dd>
+        </dl>
+        <p>Information entered in the quote form is not stored by this website. It is only sent by WhatsApp or email, when you choose to send it.</p>
+      </details>
+      <p>© 2026 Sékou Fissourou</p>
+    </div>
+  </div>
+</footer>
+
+<div class="barre-mobile">
+  <a class="btn btn-contour" href="tel:+33783440311">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Call
+  </a>
+  <a class="btn btn-jaune" href="index.html#devis">Free quote</a>
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

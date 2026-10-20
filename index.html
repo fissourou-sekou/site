@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    SITE DE SÉKOU FISSOUROU, PEINTRE EN BÂTIMENT
+    ===========================================
+    En ligne : https://sekou-fissourou.pages.dev/ (Cloudflare Pages)
+
+    Fichiers
+      index.html            la page d'accueil en français (la page d'origine du site)
+      realisations.html     la galerie complète en français, avec des filtres
+      en/index.html         la page d'accueil en anglais
+      en/realisations.html  la galerie en anglais
+      css/style.css         l'apparence : couleurs, polices, mise en page
+      js/script.js          les interactions : visionneuse, filtres, avant/après, nuancier, devis
+                            (ses messages existent en français et en anglais)
+      medias/photos/        les photos des chantiers, en trois tailles (-s, -m, -l)
+      medias/videos/        les vidéos (sans le son) et leurs images d'aperçu
+      medias/avant-apres/   les deux photos alignées de la chambre d'enfant (curseur avant/après)
+      fonts/                les polices, hébergées avec le site (aucun appel à Google)
+      images/               le favicon
+      robots.txt, sitemap.xml  la liste des pages pour Google
+
+    Deux langues
+      Le français reste la langue d'origine. Le bouton EN de l'en-tête ouvre la version anglaise,
+      et le bouton FR des pages anglaises ramène au français.
+      Quand tu changes un texte ici, change-le aussi dans la page anglaise (dossier en/).
+      Dans les pages anglaises, les chemins des images commencent par ../ (ex. ../medias/photos/).
+
+    Voir le site pendant que tu le modifies
+      Extension VS Code « Live Server », puis clic droit sur index.html > « Open with Live Server ».
+
+    Mettre à jour le site en ligne
+      Cloudflare > Workers & Pages > sekou-fissourou > Create new deployment, puis glisse le dossier.
+
+    Encore à compléter (Cmd+Maj+H sur Mac : « Remplacer dans les fichiers », pages FR et EN)
+      à compléter                 statut et SIRET, adresse (mentions légales ; « to be completed » en anglais)
+    Réseaux sociaux : aucun lien pour l'instant (rien sur sa carte de visite). Pour en ajouter,
+      remets une ligne « Sur les réseaux » dans le bloc Contact direct des deux pages d'accueil.
+    Si le site change d'adresse (nom de domaine), remplace https://sekou-fissourou.pages.dev
+    dans les pages HTML, robots.txt et sitemap.xml.
+  -->
+  <title>Sékou Fissourou · Peintre en bâtiment</title>
+  <meta name="description" content="Sékou Fissourou, peintre en bâtiment : peinture intérieure, pose de papiers peints panoramiques, réparation des murs et des plafonds. Devis gratuit et détaillé après visite.">
+  <meta name="color-scheme" content="only light">
+  <meta name="theme-color" content="#F5F6F8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Sékou Fissourou · Peintre en bâtiment">
+  <meta property="og:description" content="Sékou Fissourou, peintre en bâtiment : peinture intérieure, pose de papiers peints panoramiques, réparation des murs et des plafonds. Devis gratuit et détaillé après visite.">
+  <meta property="og:url" content="https://sekou-fissourou.pages.dev/">
+  <meta property="og:image" content="https://sekou-fissourou.pages.dev/medias/partage.jpg">
+  <link rel="canonical" href="https://sekou-fissourou.pages.dev/">
+  <link rel="alternate" hreflang="fr" href="https://sekou-fissourou.pages.dev/">
+  <link rel="alternate" hreflang="en" href="https://sekou-fissourou.pages.dev/en/">
+  <link rel="alternate" hreflang="x-default" href="https://sekou-fissourou.pages.dev/">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/big-shoulders-stencil-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Données lues par Google pour la fiche de l'entreprise : à mettre à jour avec les vraies informations -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "name": "Sékou Fissourou",
+    "description": "Peintre en bâtiment : peinture intérieure, papiers peints panoramiques, réparation des murs et des plafonds.",
+    "url": "https://sekou-fissourou.pages.dev/",
+    "image": "https://sekou-fissourou.pages.dev/medias/partage.jpg",
+    "telephone": "+33783440311",
+    "email": "fissourousekou@gmail.com",
+    "areaServed": ["Pau et alentours", "France"]
+  }
+  </script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="enveloppe entete-in">
+    <a class="marque" href="#haut" aria-label="Sékou Fissourou, peintre en bâtiment : retour en haut de page">
+      <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+        <g transform="translate(20 36)">
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+          <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+          <circle class="logo-rivet" r="3.2"/>
+        </g>
+      </svg>
+      <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Peintre en bâtiment</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#prestations">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="#avant-apres">Avant / après</a>
+      <a href="#methode">Méthode</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="langue" href="en/" hreflang="en" lang="en" aria-label="EN, English version" title="English version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9M12 3c-2.4 2.6-3.6 5.6-3.6 9s1.2 6.4 3.6 9"/></svg><span>EN</span></a>
+    <a class="btn btn-jaune btn-petit btn-devis" href="#devis">Devis gratuit</a>
+    <button class="nav-bouton" type="button" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menu
+    </button>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- ===== Haut de page ===== -->
+<section class="hero" id="haut" aria-labelledby="titre-hero">
+  <div class="enveloppe hero-grille">
+    <div class="hero-texte">
+      <p class="surtitre" style="--pastille:#5D9B9B">Peintre en bâtiment · peinture et papier peint</p>
+      <h1 class="hero-titre" id="titre-hero">Couleurs <span class="rouleau">neuves</span>,<br> chantier propre.</h1>
+      <p class="hero-chapo">Sékou Fissourou repeint et décore appartements, maisons, commerces et bureaux : peinture, papiers peints panoramiques, réparation des murs et des plafonds. Le devis est clair avant de commencer.</p>
+      <div class="hero-actions">
+        <a class="btn btn-jaune" href="#devis">Demander un devis gratuit</a>
+        <a class="btn btn-contour" href="tel:+33783440311">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <span>Appeler le <span class="nowrap">07 83 44 03 11</span></span>
+        </a>
+      </div>
+      <ul class="garanties">
+        <li>Devis gratuit et détaillé</li>
+        <li>Sols et meubles protégés</li>
+        <li>Chantier rendu propre</li>
+      </ul>
+    </div>
+
+    <div class="hero-photos">
+      <a class="hero-photo hero-photo-1" href="medias/photos/p034-l.webp" data-galerie="hero" data-legende="Panoramique forêt dans une entrée" data-largeur="1396" data-hauteur="1600">
+        <img src="medias/photos/p034-m.webp" srcset="medias/photos/p034-s.webp 480w, medias/photos/p034-m.webp 960w, medias/photos/p034-l.webp 1396w" sizes="(min-width: 980px) 300px, 52vw" width="960" height="1101" alt="Panoramique forêt dans une entrée" loading="eager" fetchpriority="high" decoding="async">
+        <span class="etiquette-photo">Panoramique forêt</span>
+      </a>
+      <a class="hero-photo hero-photo-2" href="medias/photos/p024-l.webp" data-galerie="hero" data-legende="Panoramique art déco aux palmiers" data-largeur="1600" data-hauteur="1200">
+        <img src="medias/photos/p024-m.webp" srcset="medias/photos/p024-s.webp 480w, medias/photos/p024-m.webp 960w, medias/photos/p024-l.webp 1600w" sizes="(min-width: 980px) 270px, 46vw" width="960" height="720" alt="Panoramique art déco aux palmiers" loading="eager" decoding="async">
+        <span class="etiquette-photo">Panoramique art déco</span>
+      </a>
+      <a class="hero-photo hero-photo-3" href="medias/photos/p042-l.webp" data-galerie="hero" data-legende="Chambre d&#x27;enfant : papier peint voitures et soubassement bleu nuit" data-largeur="1600" data-hauteur="1200">
+        <img src="medias/photos/p042-m.webp" srcset="medias/photos/p042-s.webp 480w, medias/photos/p042-m.webp 960w, medias/photos/p042-l.webp 1600w" sizes="(min-width: 980px) 270px, 46vw" width="960" height="720" alt="Chambre d&#x27;enfant : papier peint voitures et soubassement bleu nuit" loading="eager" decoding="async">
+        <span class="etiquette-photo">Chambre d'enfant</span>
+      </a>
+      <a class="hero-compteur" href="realisations.html"><strong>133</strong> <span>photos de chantiers</span> <span>Voir la galerie&nbsp;→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Prestations ===== -->
+<section class="section section-blanche" id="prestations" aria-labelledby="titre-prestations">
+  <div class="enveloppe">
+    <div class="section-tete">
+      <p class="surtitre" style="--pastille:#606E8C">Prestations</p>
+      <h2 id="titre-prestations">Du rebouchage au papier peint</h2>
+      <p class="section-intro">Chaque chantier commence par une visite et un devis écrit. Sékou travaille pour&nbsp;:</p>
+      <ul class="clients">
+        <li>Particuliers</li>
+        <li>Propriétaires bailleurs</li>
+        <li>Syndics de copropriété</li>
+        <li>Agences immobilières</li>
+        <li>Commerces et bureaux</li>
+      </ul>
+    </div>
+    <div class="grille-services">
+      <article class="service">
+        <a class="service-photo" href="realisations.html#peinture" tabindex="-1" aria-hidden="true"><img src="medias/photos/p013-m.webp" srcset="medias/photos/p013-s.webp 480w, medias/photos/p013-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="640" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Peinture intérieure</h3>
+          <p>Murs, plafonds, portes et boiseries. Finition mate, velours ou satinée selon l'usage de chaque pièce.</p>
+          <ul class="etiquettes"><li>Plafonds</li><li>Pièces humides</li><li>Portes</li></ul>
+          <a class="lien-fleche" href="realisations.html#peinture">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+      <article class="service">
+        <a class="service-photo" href="realisations.html#papier-peint" tabindex="-1" aria-hidden="true"><img src="medias/photos/p044-m.webp" srcset="medias/photos/p044-s.webp 480w, medias/photos/p044-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="720" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Papier peint et panoramiques</h3>
+          <p>Papiers peints, panoramiques et fresques murales : mur préparé, raccords soignés, pose lé par lé.</p>
+          <ul class="etiquettes"><li>Panoramiques</li><li>Intissé</li><li>Fresques</li></ul>
+          <a class="lien-fleche" href="realisations.html#papier-peint">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+      <article class="service">
+        <a class="service-photo" href="realisations.html#renovation" tabindex="-1" aria-hidden="true"><img src="medias/photos/p092-m.webp" srcset="medias/photos/p092-s.webp 480w, medias/photos/p092-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="1707" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Murs et plafonds abîmés</h3>
+          <p>Fissures, trous, enduit qui s'écaille, plafond fatigué : rebouchage, bandes et enduit de lissage avant la peinture.</p>
+          <ul class="etiquettes"><li>Fissures</li><li>Plafonds</li><li>Enduits</li></ul>
+          <a class="lien-fleche" href="realisations.html#renovation">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+      <article class="service">
+        <a class="service-photo" href="realisations.html#peinture" tabindex="-1" aria-hidden="true"><img src="medias/photos/p160-m.webp" srcset="medias/photos/p160-s.webp 480w, medias/photos/p160-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="1280" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Escaliers, portes et boiseries</h3>
+          <p>Escaliers, portes, plinthes et huisseries : ponçage, laque ou vernis pour un rendu net et durable.</p>
+          <ul class="etiquettes"><li>Escaliers</li><li>Portes</li><li>Vernis</li></ul>
+          <a class="lien-fleche" href="realisations.html#peinture">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+      <article class="service">
+        <a class="service-photo" href="realisations.html#renovation" tabindex="-1" aria-hidden="true"><img src="medias/photos/p075-m.webp" srcset="medias/photos/p075-s.webp 480w, medias/photos/p075-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="1280" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Rénovation de logements</h3>
+          <p>Rafraîchissement complet entre deux locataires ou avant une vente, du rebouchage à la dernière couche.</p>
+          <ul class="etiquettes"><li>Bailleurs</li><li>Agences</li><li>Avant-vente</li></ul>
+          <a class="lien-fleche" href="realisations.html#renovation">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+      <article class="service">
+        <a class="service-photo" href="realisations.html#peinture" tabindex="-1" aria-hidden="true"><img src="medias/photos/p019-m.webp" srcset="medias/photos/p019-s.webp 480w, medias/photos/p019-m.webp 960w" sizes="(min-width: 980px) 380px, (min-width: 640px) 46vw, 92vw" width="960" height="720" alt="" loading="lazy" decoding="async"></a>
+        <div class="service-corps">
+          <h3>Commerces, bureaux et immeubles</h3>
+          <p>Espaces de restauration, bureaux, couloirs et parties communes, avec un planning adapté à votre activité. Façades sur demande.</p>
+          <ul class="etiquettes"><li>Commerces</li><li>Bureaux</li><li>Parties communes</li></ul>
+          <a class="lien-fleche" href="realisations.html#peinture">Voir les photos&nbsp;→</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Aperçu des réalisations ===== -->
+<section class="section" id="realisations" aria-labelledby="titre-realisations">
+  <div class="enveloppe">
+    <div class="section-tete-ligne">
+      <div class="section-tete">
+        <p class="surtitre" style="--pastille:#89AC76">Réalisations</p>
+        <h2 id="titre-realisations">Ses chantiers en images</h2>
+        <p class="section-intro">133 photos et 10 vidéos&nbsp;: panoramiques, peinture, murs et plafonds remis à neuf. Touchez une photo pour l'agrandir.</p>
+      </div>
+      <a class="btn btn-contour" href="realisations.html">Voir toute la galerie</a>
+    </div>
+    <ul class="mosaique">
+      <li class="m-grand"><a class="vignette" href="medias/photos/p056-l.webp" data-galerie="apercu" data-legende="Panoramique jungle : éléphant et girafes" data-largeur="1600" data-hauteur="1032"><img src="medias/photos/p056-m.webp" srcset="medias/photos/p056-s.webp 480w, medias/photos/p056-m.webp 960w" sizes="(min-width: 760px) 50vw, 100vw" width="960" height="619" alt="Panoramique jungle : éléphant et girafes" loading="lazy" decoding="async"><span class="vignette-legende">Panoramique jungle : éléphant et girafes</span></a></li>
+      <li class="m-haut"><a class="vignette" href="medias/photos/p038-l.webp" data-galerie="apercu" data-legende="Panoramique à arches sous un habillage de tasseaux bois" data-largeur="1396" data-hauteur="1600"><img src="medias/photos/p038-m.webp" srcset="medias/photos/p038-s.webp 480w, medias/photos/p038-m.webp 960w" sizes="(min-width: 760px) 25vw, 50vw" width="960" height="1101" alt="Panoramique à arches sous un habillage de tasseaux bois" loading="lazy" decoding="async"><span class="vignette-legende">Panoramique à arches sous un habillage de tasseaux bois</span></a></li>
+      <li class=""><a class="vignette" href="medias/photos/p016-l.webp" data-galerie="apercu" data-legende="Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit" data-largeur="1200" data-hauteur="1600"><img src="medias/photos/p016-m.webp" srcset="medias/photos/p016-s.webp 480w, medias/photos/p016-m.webp 960w" sizes="(min-width: 760px) 25vw, 50vw" width="960" height="1280" alt="Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit" loading="lazy" decoding="async"><span class="vignette-legende">Papier peint jardin vertical au-dessus d&#x27;un soubassement bleu nuit</span></a></li>
+      <li><a class="vignette" href="medias/videos/v009.mp4" data-galerie="apercu" data-type="video" data-affiche="medias/videos/v009-affiche.webp" data-legende="Pose d&#x27;un papier peint feuillage tropical" data-largeur="576" data-hauteur="1280"><img src="medias/videos/v009-vignette.webp" srcset="medias/videos/v009-vignette.webp 360w, medias/videos/v009-affiche.webp 576w" sizes="(min-width: 760px) 25vw, 50vw" width="360" height="800" alt="Vidéo : Pose d&#x27;un papier peint feuillage tropical" loading="lazy" decoding="async"><span class="lecture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span><span class="duree">0:07</span><span class="vignette-legende">Vidéo : Pose d&#x27;un papier peint feuillage tropical</span></a></li>
+      <li class="m-large"><a class="vignette" href="medias/photos/p053-l.webp" data-galerie="apercu" data-legende="Fresque murale illustrée, pose terminée" data-largeur="1600" data-hauteur="1032"><img src="medias/photos/p053-m.webp" srcset="medias/photos/p053-s.webp 480w, medias/photos/p053-m.webp 960w" sizes="(min-width: 760px) 50vw, 100vw" width="960" height="619" alt="Fresque murale illustrée, pose terminée" loading="lazy" decoding="async"><span class="vignette-legende">Fresque murale illustrée, pose terminée</span></a></li>
+      <li class=""><a class="vignette" href="medias/photos/p015-l.webp" data-galerie="apercu" data-legende="Appartement : murs bleu canard et bleu nuit" data-largeur="980" data-hauteur="1600"><img src="medias/photos/p015-m.webp" srcset="medias/photos/p015-s.webp 480w, medias/photos/p015-m.webp 960w" sizes="(min-width: 760px) 25vw, 50vw" width="960" height="1567" alt="Appartement : murs bleu canard et bleu nuit" loading="lazy" decoding="async"><span class="vignette-legende">Appartement : murs bleu canard et bleu nuit</span></a></li>
+      <li class=""><a class="vignette" href="medias/photos/p046-l.webp" data-galerie="apercu" data-legende="Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc" data-largeur="1396" data-hauteur="1600"><img src="medias/photos/p046-m.webp" srcset="medias/photos/p046-s.webp 480w, medias/photos/p046-m.webp 960w" sizes="(min-width: 760px) 25vw, 50vw" width="960" height="1101" alt="Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc" loading="lazy" decoding="async"><span class="vignette-legende">Montée d&#x27;escalier habillée d&#x27;un panoramique noir et blanc</span></a></li>
+    </ul>
+    <p class="mosaique-pied"><a class="btn btn-jaune" href="realisations.html">Voir les 133 photos et 10 vidéos</a></p>
+  </div>
+</section>
+
+<!-- ===== Avant / après ===== -->
+<section class="section section-blanche" id="avant-apres" aria-labelledby="titre-avap">
+  <div class="enveloppe">
+    <div class="section-tete">
+      <p class="surtitre" style="--pastille:#C1876B">Avant / après</p>
+      <h2 id="titre-avap">La différence se voit</h2>
+      <p class="section-intro">Faites glisser le curseur sur la chambre d'enfant, puis comparez les photos des autres chantiers.</p>
+    </div>
+
+    <div class="avap-grille">
+      <div class="avap-bloc">
+        <div class="avap" style="aspect-ratio: 960 / 671">
+          <img class="avap-img-apres" src="medias/avant-apres/chambre-apres-m.webp" srcset="medias/avant-apres/chambre-apres-m.webp 960w, medias/avant-apres/chambre-apres-l.webp 1600w" sizes="(min-width: 980px) 640px, 92vw" width="960" height="671" alt="Après : papier peint à motifs de voitures au-dessus du soubassement bleu nuit" loading="lazy" decoding="async">
+          <img class="avap-img-avant" src="medias/avant-apres/chambre-avant-m.webp" srcset="medias/avant-apres/chambre-avant-m.webp 960w, medias/avant-apres/chambre-avant-l.webp 1600w" sizes="(min-width: 980px) 640px, 92vw" width="960" height="671" alt="Avant : murs blancs au-dessus du soubassement bleu nuit" loading="lazy" decoding="async">
+          <span class="avap-etiquette avant" aria-hidden="true">Avant</span>
+          <span class="avap-etiquette apres" aria-hidden="true">Après</span>
+          <input type="range" id="avap-curseur" min="0" max="100" value="50" aria-label="Comparer la chambre avant et après la pose du papier peint">
+          <div class="avap-poignee" aria-hidden="true">
+            <span class="avap-bouton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span>
+          </div>
+        </div>
+        <p class="avap-legende">Chambre d'enfant&nbsp;: soubassement peint en bleu nuit, puis papier peint à motifs de voitures.</p>
+      </div>
+      <div class="avap-texte">
+        <h3>Ce qui fait la différence</h3>
+        <p>Un mur repeint sans préparation garde ses défauts sous la peinture. Les étapes d'une remise en peinture soignée&nbsp;:</p>
+        <ol class="prepa">
+          <li><span><strong>Lessivage</strong> des murs encrassés</span></li>
+          <li><span><strong>Rebouchage</strong> des trous et des fissures à l'enduit</span></li>
+          <li><span><strong>Ponçage</strong> et dépoussiérage</span></li>
+          <li><span><strong>Sous-couche</strong> pour une teinte uniforme</span></li>
+          <li><span><strong>Deux couches</strong> de finition</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <ul class="paires">
+      <li class="paire">
+        <div class="paire-photos">
+          <a class="paire-photo" href="medias/photos/p098-l.webp" data-galerie="paire-1" data-legende="Avant travaux : plafond qui s&#x27;écaille" data-largeur="1600" data-hauteur="900"><img src="medias/photos/p098-m.webp" srcset="medias/photos/p098-s.webp 480w, medias/photos/p098-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="540" alt="Avant travaux : plafond qui s&#x27;écaille" loading="lazy" decoding="async"><span class="paire-etiquette">Avant</span></a>
+          <a class="paire-photo" href="medias/photos/p100-l.webp" data-galerie="paire-1" data-legende="Plafond lisse après réfection" data-largeur="1600" data-hauteur="900"><img src="medias/photos/p100-m.webp" srcset="medias/photos/p100-s.webp 480w, medias/photos/p100-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="540" alt="Plafond lisse après réfection" loading="lazy" decoding="async"><span class="paire-etiquette apres">Après</span></a>
+        </div>
+        <h3>Plafond</h3>
+        <p>Plafond écaillé, gratté, rebouché puis repeint.</p>
+      </li>
+      <li class="paire">
+        <div class="paire-photos">
+          <a class="paire-photo" href="medias/photos/p189-l.webp" data-galerie="paire-2" data-legende="Avant travaux : cuisine aux murs bruts" data-largeur="1600" data-hauteur="900"><img src="medias/photos/p189-m.webp" srcset="medias/photos/p189-s.webp 480w, medias/photos/p189-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="540" alt="Avant travaux : cuisine aux murs bruts" loading="lazy" decoding="async"><span class="paire-etiquette">Avant</span></a>
+          <a class="paire-photo" href="medias/photos/p040-l.webp" data-galerie="paire-2" data-legende="Cuisine terminée, mur beige et fenêtre noire" data-largeur="1600" data-hauteur="1032"><img src="medias/photos/p040-m.webp" srcset="medias/photos/p040-s.webp 480w, medias/photos/p040-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="619" alt="Cuisine terminée, mur beige et fenêtre noire" loading="lazy" decoding="async"><span class="paire-etiquette apres">Après</span></a>
+        </div>
+        <h3>Cuisine</h3>
+        <p>Murs bruts préparés et peints avant la pose de la cuisine.</p>
+      </li>
+      <li class="paire">
+        <div class="paire-photos">
+          <a class="paire-photo" href="medias/photos/p059-l.webp" data-galerie="paire-3" data-legende="Pose lé par lé du panoramique jungle" data-largeur="1396" data-hauteur="1600"><img src="medias/photos/p059-m.webp" srcset="medias/photos/p059-s.webp 480w, medias/photos/p059-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="1101" alt="Pose lé par lé du panoramique jungle" loading="lazy" decoding="async"><span class="paire-etiquette">Pendant</span></a>
+          <a class="paire-photo" href="medias/photos/p057-l.webp" data-galerie="paire-3" data-legende="Panoramique jungle, pose terminée" data-largeur="1396" data-hauteur="1600"><img src="medias/photos/p057-m.webp" srcset="medias/photos/p057-s.webp 480w, medias/photos/p057-m.webp 960w" sizes="(min-width: 860px) 190px, 46vw" width="960" height="1101" alt="Panoramique jungle, pose terminée" loading="lazy" decoding="async"><span class="paire-etiquette apres">Après</span></a>
+        </div>
+        <h3>Panoramique</h3>
+        <p>La pose lé par lé, puis le mur terminé.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Essayez une teinte ===== -->
+<section class="section" id="teintes" aria-labelledby="titre-teintes">
+  <div class="enveloppe teintes-grille">
+    <div class="teintes-texte">
+      <div class="section-tete">
+        <p class="surtitre" style="--pastille:#EFA94A">Couleurs</p>
+        <h2 id="titre-teintes">Vous hésitez sur une teinte&nbsp;?</h2>
+        <p class="section-intro">Touchez une couleur du nuancier pour repeindre le salon ou la façade. Quand une teinte vous plaît, ajoutez-la à votre demande de devis.</p>
+      </div>
+      <a class="btn btn-contour" href="#devis">Demander un devis</a>
+    </div>
+      <div class="visu" role="group" aria-labelledby="visu-titre">
+        <div class="visu-tete">
+          <p class="visu-titre" id="visu-titre"><strong>Essayez une teinte</strong><span>Touchez une couleur pour repeindre</span></p>
+          <div class="bascule" role="group" aria-label="Choisir la scène">
+            <button type="button" data-scene="salon" aria-pressed="true">Salon</button>
+            <button type="button" data-scene="facade" aria-pressed="false">Façade</button>
+          </div>
+        </div>
+
+        <div class="visu-scene">
+          <!-- Scène : salon -->
+          <svg id="scene-salon" viewBox="0 0 640 480" role="img" aria-label="Salon illustré dont le mur prend la teinte choisie">
+            <defs>
+              <linearGradient id="sal-lum" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FFFFFF" stop-opacity=".26"/>
+                <stop offset=".4" stop-color="#FFFFFF" stop-opacity=".05"/>
+                <stop offset="1" stop-color="#000000" stop-opacity=".12"/>
+              </linearGradient>
+              <linearGradient id="sal-haut" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#000000" stop-opacity=".1"/>
+                <stop offset=".18" stop-color="#000000" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="sal-ciel" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9FCDEB"/>
+                <stop offset="1" stop-color="#E2F1FA"/>
+              </linearGradient>
+              <linearGradient id="sal-sol" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#B08560"/>
+                <stop offset="1" stop-color="#D2AC82"/>
+              </linearGradient>
+              <radialGradient id="sal-halo">
+                <stop offset="0" stop-color="#FFE7A8" stop-opacity=".6"/>
+                <stop offset="1" stop-color="#FFE7A8" stop-opacity="0"/>
+              </radialGradient>
+              <clipPath id="sal-clip"><rect id="sal-clip-rect" x="0" y="0" width="0" height="480"/></clipPath>
+            </defs>
+            <rect id="sal-mur" x="0" y="20" width="640" height="322" fill="#5D9B9B"/>
+            <rect id="sal-mur-neuf" x="0" y="20" width="640" height="322" fill="#5D9B9B" clip-path="url(#sal-clip)"/>
+            <rect x="0" y="20" width="640" height="322" fill="url(#sal-lum)"/>
+            <rect x="0" y="20" width="640" height="322" fill="url(#sal-haut)"/>
+            <rect x="0" y="0" width="640" height="18" fill="#FAF9F6"/>
+            <rect x="0" y="16" width="640" height="6" fill="#ECE9E2"/>
+            <rect x="0" y="340" width="640" height="14" fill="#F3F1EC"/>
+            <rect x="0" y="340" width="640" height="2" fill="#DCD7CD"/>
+            <rect x="0" y="354" width="640" height="126" fill="url(#sal-sol)"/>
+            <g stroke="#7E5B3E" stroke-opacity=".28" stroke-width="1.5">
+              <path d="M0 372H640M0 394H640M0 421H640M0 452H640"/>
+              <path d="M118 354V372M392 354V372M58 372V394M300 372V394M548 372V394M196 394V421M462 394V421M92 421V452M352 421V452M606 421V452M232 452V480M500 452V480"/>
+            </g>
+            <polygon points="78,354 202,354 262,480 112,480" fill="#FFFFFF" fill-opacity=".13"/>
+            <!-- fenêtre -->
+            <rect x="64" y="64" width="150" height="220" rx="3" fill="#FCFCFA"/>
+            <rect x="76" y="76" width="126" height="196" fill="url(#sal-ciel)"/>
+            <path d="M76 240c14-22 34-22 46-8 12-18 32-18 44-4 12-12 26-10 36 0V272H76Z" fill="#7FB38E" fill-opacity=".75"/>
+            <rect x="136" y="76" width="6" height="196" fill="#FCFCFA"/>
+            <rect x="76" y="168" width="126" height="6" fill="#FCFCFA"/>
+            <polygon points="84,86 114,86 84,128" fill="#FFFFFF" fill-opacity=".38"/>
+            <rect x="56" y="282" width="166" height="10" rx="2" fill="#FCFCFA"/>
+            <rect x="58" y="292" width="162" height="4" fill="#000000" fill-opacity=".08"/>
+            <!-- rideau -->
+            <rect x="46" y="52" width="208" height="5" rx="2.5" fill="#2B303B"/>
+            <circle cx="46" cy="54.5" r="5" fill="#2B303B"/>
+            <circle cx="254" cy="54.5" r="5" fill="#2B303B"/>
+            <path d="M216 57h28v276c-4 4-10 4-14 0-4 4-10 4-14 0Z" fill="#EFE9DE"/>
+            <path d="M224 60V330M235 60V330" stroke="#D8CEBD" stroke-width="2"/>
+            <!-- plante -->
+            <ellipse cx="36" cy="374" rx="26" ry="4" fill="#000000" fill-opacity=".14"/>
+            <ellipse cx="20" cy="262" rx="13" ry="30" transform="rotate(-24 20 262)" fill="#3F8A5C"/>
+            <ellipse cx="50" cy="252" rx="12" ry="32" transform="rotate(18 50 252)" fill="#4FA06D"/>
+            <ellipse cx="34" cy="236" rx="10" ry="30" transform="rotate(-3 34 236)" fill="#2F7A4E"/>
+            <ellipse cx="12" cy="298" rx="9" ry="22" transform="rotate(-52 12 298)" fill="#4FA06D"/>
+            <ellipse cx="58" cy="292" rx="9" ry="22" transform="rotate(50 58 292)" fill="#3F8A5C"/>
+            <path d="M15 320h42l-5 52H20Z" fill="#E9E2D5"/>
+            <rect x="12" y="314" width="48" height="9" rx="2" fill="#F3EEE5"/>
+            <!-- lampadaire -->
+            <circle cx="266" cy="168" r="84" fill="url(#sal-halo)"/>
+            <rect x="264" y="150" width="4" height="224" fill="#2B303B"/>
+            <ellipse cx="266" cy="375" rx="20" ry="5" fill="#2B303B"/>
+            <path d="M246 104h40l14 48h-68Z" fill="#F4EBDC"/>
+            <path d="M246 104h40l1.5 5h-43Z" fill="#E3D5BE"/>
+            <!-- tableau -->
+            <rect x="380" y="104" width="134" height="96" fill="#262B36"/>
+            <rect x="386" y="110" width="122" height="84" fill="#FBFAF7"/>
+            <rect x="396" y="120" width="102" height="64" fill="#E7EDF1"/>
+            <circle cx="470" cy="140" r="11" fill="#EE9B3A"/>
+            <path d="M396 184l30-36 22 22 16-14 34 28Z" fill="#5F7F9C"/>
+            <path d="M396 184l26-22 30 22Z" fill="#94AEC1"/>
+            <!-- canapé -->
+            <ellipse cx="447" cy="372" rx="170" ry="7" fill="#000000" fill-opacity=".16"/>
+            <rect x="306" y="344" width="8" height="26" rx="2" fill="#22262F"/>
+            <rect x="580" y="344" width="8" height="26" rx="2" fill="#22262F"/>
+            <rect x="302" y="232" width="290" height="80" rx="20" fill="#363D4D"/>
+            <rect x="322" y="246" width="122" height="48" rx="13" fill="#434B5D"/>
+            <rect x="450" y="246" width="122" height="48" rx="13" fill="#434B5D"/>
+            <rect x="338" y="256" width="54" height="40" rx="10" fill="#FFC21A" transform="rotate(-8 365 276)"/>
+            <rect x="296" y="290" width="302" height="54" rx="12" fill="#3E4657"/>
+            <rect x="300" y="292" width="294" height="8" rx="4" fill="#4A5367"/>
+            <rect x="284" y="262" width="32" height="86" rx="15" fill="#30364A"/>
+            <rect x="578" y="262" width="32" height="86" rx="15" fill="#30364A"/>
+            <!-- tapis et table basse -->
+            <ellipse cx="440" cy="438" rx="212" ry="34" fill="#E9E2D4"/>
+            <ellipse cx="440" cy="438" rx="188" ry="26" fill="none" stroke="#D2C6B1" stroke-width="2"/>
+            <ellipse cx="444" cy="436" rx="66" ry="7" fill="#000000" fill-opacity=".14"/>
+            <rect x="396" y="404" width="5" height="30" fill="#6F5139"/>
+            <rect x="487" y="404" width="5" height="30" fill="#6F5139"/>
+            <ellipse cx="444" cy="404" rx="74" ry="12" fill="#86644A"/>
+            <ellipse cx="444" cy="400" rx="74" ry="11" fill="#A27D5F"/>
+            <rect x="420" y="374" width="16" height="25" rx="5" fill="#FBFAF7"/>
+            <path d="M428 375c-9-14-4-26 2-31M428 375c6-12 13-18 20-20" stroke="#3F8A5C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="452" y="391" width="36" height="7" rx="1.5" fill="#2443CC"/>
+            <!-- rouleau -->
+            <g id="sal-rouleau" opacity="0">
+              <path d="M46 0H58V34H0V48" fill="none" stroke="#1F2430" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+              <rect x="-7" y="46" width="14" height="64" rx="7" fill="#FFC21A" stroke="#1F2430" stroke-width="2"/>
+              <rect class="rouleau-manchon" x="-46" y="-14" width="92" height="28" rx="14" fill="#5D9B9B" stroke="#1F2430" stroke-width="2.5"/>
+              <path d="M-36 -6H36" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+
+          <!-- Scène : façade -->
+          <svg id="scene-facade" viewBox="0 0 640 480" role="img" aria-label="Façade d'immeuble illustrée dont le mur prend la teinte choisie" hidden>
+            <defs>
+              <linearGradient id="fac-ciel" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#B7DCF3"/>
+                <stop offset="1" stop-color="#EDF6FC"/>
+              </linearGradient>
+              <linearGradient id="fac-lum" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FFFFFF" stop-opacity=".18"/>
+                <stop offset=".55" stop-color="#FFFFFF" stop-opacity="0"/>
+                <stop offset="1" stop-color="#000000" stop-opacity=".1"/>
+              </linearGradient>
+              <linearGradient id="fac-vitre" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#A9CCE1"/>
+                <stop offset="1" stop-color="#6B93AF"/>
+              </linearGradient>
+              <clipPath id="fac-clip"><rect id="fac-clip-rect" x="88" y="0" width="0" height="480"/></clipPath>
+              <g id="fac-fen">
+                <rect x="0" y="0" width="20" height="70" fill="#3E5A73"/>
+                <rect x="74" y="0" width="20" height="70" fill="#3E5A73"/>
+                <path d="M2 10H18M2 20H18M2 30H18M2 40H18M2 50H18M2 60H18M76 10H92M76 20H92M76 30H92M76 40H92M76 50H92M76 60H92" stroke="#000000" stroke-opacity=".2" stroke-width="1.5"/>
+                <rect x="22" y="0" width="50" height="70" fill="#FBFBF8"/>
+                <rect x="26" y="4" width="42" height="62" fill="url(#fac-vitre)"/>
+                <rect x="45" y="4" width="4" height="62" fill="#FBFBF8"/>
+                <polygon points="29,8 41,8 29,27" fill="#FFFFFF" fill-opacity=".4"/>
+                <rect x="18" y="70" width="58" height="5" fill="#F4F2EC"/>
+              </g>
+              <g id="fac-garde" fill="none" stroke="#2B2F38">
+                <rect x="24" y="44" width="46" height="22" stroke-width="2"/>
+                <path d="M33.2 44V66M42.4 44V66M51.6 44V66M60.8 44V66" stroke-width="1.5"/>
+              </g>
+              <g id="fac-jardiniere">
+                <rect x="0" y="0" width="60" height="54" fill="#FBFBF8"/>
+                <rect x="4" y="4" width="52" height="46" fill="url(#fac-vitre)"/>
+                <rect x="28" y="4" width="4" height="46" fill="#FBFBF8"/>
+                <rect x="-4" y="54" width="68" height="10" fill="#8C5A3C"/>
+                <circle cx="4" cy="52" r="4" fill="#E0526B"/><circle cx="18" cy="50" r="4" fill="#E0526B"/><circle cx="44" cy="50" r="4" fill="#E0526B"/><circle cx="58" cy="52" r="4" fill="#E0526B"/>
+                <circle cx="11" cy="53" r="4" fill="#4FA06D"/><circle cx="31" cy="51" r="5" fill="#4FA06D"/><circle cx="51" cy="53" r="4" fill="#4FA06D"/>
+              </g>
+            </defs>
+            <rect width="640" height="480" fill="url(#fac-ciel)"/>
+            <circle cx="566" cy="62" r="24" fill="#FFE39A"/>
+            <g fill="#FFFFFF" fill-opacity=".92"><ellipse cx="126" cy="60" rx="42" ry="13"/><ellipse cx="150" cy="50" rx="26" ry="14"/><ellipse cx="100" cy="54" rx="20" ry="10"/></g>
+            <!-- voisins -->
+            <rect x="0" y="142" width="80" height="280" fill="#D9D3C7"/>
+            <rect x="560" y="120" width="80" height="302" fill="#CBD0D9"/>
+            <g fill="#9FB5C6"><rect x="16" y="166" width="40" height="54"/><rect x="16" y="246" width="40" height="54"/><rect x="578" y="146" width="44" height="54"/><rect x="578" y="226" width="44" height="54"/><rect x="578" y="306" width="44" height="54"/></g>
+            <!-- toit -->
+            <path d="M80 112 104 62H536L560 112Z" fill="#59606E"/>
+            <path d="M150 62V112M210 62V112M270 62V112M330 62V112M390 62V112M450 62V112M510 62V112" stroke="#000000" stroke-opacity=".12" stroke-width="2"/>
+            <rect x="468" y="30" width="26" height="36" fill="#9A6E5C"/>
+            <rect x="464" y="26" width="34" height="7" fill="#7E5A4B"/>
+            <path d="M190 78 213 60 236 78Z" fill="#4B515E"/>
+            <rect x="196" y="78" width="34" height="32" fill="#FBFBF8"/>
+            <rect x="200" y="82" width="26" height="28" fill="url(#fac-vitre)"/>
+            <path d="M404 78 427 60 450 78Z" fill="#4B515E"/>
+            <rect x="410" y="78" width="34" height="32" fill="#FBFBF8"/>
+            <rect x="414" y="82" width="26" height="28" fill="url(#fac-vitre)"/>
+            <!-- façade -->
+            <rect id="fac-mur" x="88" y="112" width="464" height="294" fill="#E6D2B5"/>
+            <rect id="fac-mur-neuf" x="88" y="112" width="464" height="294" fill="#E6D2B5" clip-path="url(#fac-clip)"/>
+            <rect x="88" y="112" width="464" height="294" fill="url(#fac-lum)"/>
+            <g fill="#FFFFFF" fill-opacity=".38">
+              <rect x="88" y="126" width="16" height="18"/><rect x="88" y="162" width="16" height="18"/><rect x="88" y="198" width="16" height="18"/><rect x="88" y="234" width="16" height="18"/><rect x="88" y="270" width="16" height="18"/><rect x="88" y="306" width="16" height="18"/><rect x="88" y="342" width="16" height="18"/><rect x="88" y="378" width="16" height="18"/>
+              <rect x="536" y="126" width="16" height="18"/><rect x="536" y="162" width="16" height="18"/><rect x="536" y="198" width="16" height="18"/><rect x="536" y="234" width="16" height="18"/><rect x="536" y="270" width="16" height="18"/><rect x="536" y="306" width="16" height="18"/><rect x="536" y="342" width="16" height="18"/><rect x="536" y="378" width="16" height="18"/>
+            </g>
+            <rect x="88" y="214" width="464" height="7" fill="#FFFFFF" fill-opacity=".5"/>
+            <rect x="88" y="316" width="464" height="7" fill="#FFFFFF" fill-opacity=".5"/>
+            <rect x="80" y="106" width="480" height="11" fill="#F4F2EC"/>
+            <rect x="88" y="117" width="464" height="5" fill="#000000" fill-opacity=".08"/>
+            <!-- fenêtres -->
+            <use href="#fac-fen" x="106" y="132"/><use href="#fac-fen" x="217" y="132"/><use href="#fac-fen" x="329" y="132"/><use href="#fac-fen" x="440" y="132"/>
+            <use href="#fac-fen" x="106" y="234"/><use href="#fac-fen" x="217" y="234"/><use href="#fac-fen" x="329" y="234"/><use href="#fac-fen" x="440" y="234"/>
+            <use href="#fac-garde" x="106" y="234"/><use href="#fac-garde" x="217" y="234"/><use href="#fac-garde" x="329" y="234"/><use href="#fac-garde" x="440" y="234"/>
+            <!-- rez-de-chaussée -->
+            <use href="#fac-jardiniere" x="130" y="338"/>
+            <use href="#fac-jardiniere" x="450" y="338"/>
+            <rect x="290" y="330" width="60" height="76" fill="#F4F2EC"/>
+            <rect x="296" y="336" width="48" height="70" fill="#2F4A5E"/>
+            <rect x="301" y="342" width="17" height="26" rx="1" fill="#3B5C74"/><rect x="322" y="342" width="17" height="26" rx="1" fill="#3B5C74"/>
+            <rect x="301" y="374" width="17" height="26" rx="1" fill="#3B5C74"/><rect x="322" y="374" width="17" height="26" rx="1" fill="#3B5C74"/>
+            <circle cx="336" cy="372" r="2.6" fill="#E3C25F"/>
+            <rect x="88" y="404" width="464" height="18" fill="#8F8B83"/>
+            <rect x="88" y="404" width="464" height="3" fill="#000000" fill-opacity=".12"/>
+            <!-- rue -->
+            <rect x="0" y="422" width="640" height="24" fill="#D8D4CC"/>
+            <rect x="0" y="446" width="640" height="4" fill="#B7B2A8"/>
+            <rect x="0" y="450" width="640" height="30" fill="#9CA1A9"/>
+            <g fill="#FFFFFF" fill-opacity=".75"><rect x="24" y="464" width="44" height="3"/><rect x="124" y="464" width="44" height="3"/><rect x="224" y="464" width="44" height="3"/><rect x="324" y="464" width="44" height="3"/><rect x="424" y="464" width="44" height="3"/><rect x="524" y="464" width="44" height="3"/></g>
+            <rect x="36" y="356" width="7" height="68" fill="#6B4E3A"/>
+            <circle cx="39" cy="338" r="30" fill="#5DA06F"/><circle cx="24" cy="352" r="16" fill="#4F9161"/><circle cx="56" cy="350" r="15" fill="#6FB27F"/>
+            <path d="M266 404h18l-2 18h-14Z" fill="#C4704F"/><circle cx="275" cy="396" r="12" fill="#4F9161"/>
+            <path d="M356 404h18l-2 18h-14Z" fill="#C4704F"/><circle cx="365" cy="396" r="12" fill="#4F9161"/>
+            <!-- rouleau -->
+            <g id="fac-rouleau" opacity="0">
+              <path d="M46 0H58V34H0V48" fill="none" stroke="#1F2430" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+              <rect x="-7" y="46" width="14" height="64" rx="7" fill="#FFC21A" stroke="#1F2430" stroke-width="2"/>
+              <rect class="rouleau-manchon" x="-46" y="-14" width="92" height="28" rx="14" fill="#E6D2B5" stroke="#1F2430" stroke-width="2.5"/>
+              <path d="M-36 -6H36" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="nuancier" role="group" aria-label="Nuancier">
+          <button type="button" class="ech" data-hex="#F1ECE1" data-nom="Blanc pur" data-ref="RAL 9010" aria-pressed="false"><span class="ech-couleur" style="background:#F1ECE1"></span><span class="ech-nom">Blanc pur</span><span class="ech-ref">RAL&nbsp;9010</span></button>
+          <button type="button" class="ech" data-hex="#E6D2B5" data-nom="Ivoire clair" data-ref="RAL 1015" aria-pressed="false"><span class="ech-couleur" style="background:#E6D2B5"></span><span class="ech-nom">Ivoire clair</span><span class="ech-ref">RAL&nbsp;1015</span></button>
+          <button type="button" class="ech" data-hex="#CAC4B0" data-nom="Gris soie" data-ref="RAL 7044" aria-pressed="false"><span class="ech-couleur" style="background:#CAC4B0"></span><span class="ech-nom">Gris soie</span><span class="ech-ref">RAL&nbsp;7044</span></button>
+          <button type="button" class="ech" data-hex="#89AC76" data-nom="Vert pâle" data-ref="RAL 6021" aria-pressed="false"><span class="ech-couleur" style="background:#89AC76"></span><span class="ech-nom">Vert pâle</span><span class="ech-ref">RAL&nbsp;6021</span></button>
+          <button type="button" class="ech" data-hex="#5D9B9B" data-nom="Bleu pastel" data-ref="RAL 5024" aria-pressed="true"><span class="ech-couleur" style="background:#5D9B9B"></span><span class="ech-nom">Bleu pastel</span><span class="ech-ref">RAL&nbsp;5024</span></button>
+          <button type="button" class="ech" data-hex="#606E8C" data-nom="Bleu pigeon" data-ref="RAL 5014" aria-pressed="false"><span class="ech-couleur" style="background:#606E8C"></span><span class="ech-nom">Bleu pigeon</span><span class="ech-ref">RAL&nbsp;5014</span></button>
+          <button type="button" class="ech" data-hex="#C1876B" data-nom="Rouge beige" data-ref="RAL 3012" aria-pressed="false"><span class="ech-couleur" style="background:#C1876B"></span><span class="ech-nom">Rouge beige</span><span class="ech-ref">RAL&nbsp;3012</span></button>
+          <button type="button" class="ech" data-hex="#EFA94A" data-nom="Jaune pastel" data-ref="RAL 1034" aria-pressed="false"><span class="ech-couleur" style="background:#EFA94A"></span><span class="ech-nom">Jaune pastel</span><span class="ech-ref">RAL&nbsp;1034</span></button>
+        </div>
+
+        <div class="visu-pied">
+          <p class="visu-choix" aria-live="polite">Teinte choisie&nbsp;: <strong id="teinte-nom">Bleu pastel</strong> <span id="teinte-ref">RAL&nbsp;5024</span></p>
+          <a class="lien-fleche" id="teinte-devis" href="#devis">Utiliser cette teinte pour mon devis&nbsp;→</a>
+        </div>
+        <p class="visu-note">Rendu indicatif. Une teinte se valide toujours sur un échantillon, sur place, à la lumière de la pièce.</p>
+      </div>
+  </div>
+</section>
+
+<!-- ===== Méthode ===== -->
+<section class="section bande" id="methode" aria-labelledby="titre-methode">
+  <div class="enveloppe">
+    <div class="section-tete">
+      <p class="surtitre" style="--pastille:#FFC21A">Méthode</p>
+      <h2 id="titre-methode">Comment se passe un chantier</h2>
+      <p class="section-intro">Quatre étapes, du premier rendez-vous au dernier coup de balai.</p>
+    </div>
+    <ol class="etapes">
+      <li class="etape"><span class="etape-num" aria-hidden="true">1</span><h3>Visite</h3><p>Sékou vient voir les surfaces, prend les mesures et vous conseille sur les teintes et les finitions.</p></li>
+      <li class="etape"><span class="etape-num" aria-hidden="true">2</span><h3>Devis écrit</h3><p>Surfaces en m², préparation, nombre de couches et produits&nbsp;: chaque poste est détaillé. Vous savez ce que vous payez.</p></li>
+      <li class="etape"><span class="etape-num" aria-hidden="true">3</span><h3>Chantier</h3><p>Sols et meubles protégés, murs rebouchés et poncés, sous-couche, puis deux couches de finition.</p></li>
+      <li class="etape"><span class="etape-num" aria-hidden="true">4</span><h3>Réception</h3><p>Vous faites le tour des pièces ensemble. Les retouches sont faites sur place et le chantier est rendu propre.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Finitions ===== -->
+<section class="section" id="finitions" aria-labelledby="titre-finitions">
+  <div class="enveloppe">
+    <div class="section-tete">
+      <p class="surtitre" style="--pastille:#C1876B">Conseil</p>
+      <h2 id="titre-finitions">Mat, velours, satiné ou brillant&nbsp;?</h2>
+      <p class="section-intro">La finition change l'aspect du mur et sa résistance. Voici où chacune donne le meilleur résultat.</p>
+    </div>
+    <ul class="finitions">
+      <li class="finition">
+        <div class="finition-ech" style="--brillance:0" aria-hidden="true"></div>
+        <h3>Mat</h3>
+        <p class="jauge">Brillance <span aria-hidden="true"><i class="plein"></i><i></i><i></i><i></i></span><span class="sr">1 sur 4</span></p>
+        <p>Absorbe la lumière et cache les petits défauts du mur.</p>
+        <p class="ou">Plafonds, séjours, chambres</p>
+      </li>
+      <li class="finition">
+        <div class="finition-ech" style="--brillance:.2" aria-hidden="true"></div>
+        <h3>Velours</h3>
+        <p class="jauge">Brillance <span aria-hidden="true"><i class="plein"></i><i class="plein"></i><i></i><i></i></span><span class="sr">2 sur 4</span></p>
+        <p>Un reflet léger, plus facile à nettoyer qu'un mat.</p>
+        <p class="ou">Chambres, couloirs, pièces de vie</p>
+      </li>
+      <li class="finition">
+        <div class="finition-ech" style="--brillance:.42" aria-hidden="true"></div>
+        <h3>Satiné</h3>
+        <p class="jauge">Brillance <span aria-hidden="true"><i class="plein"></i><i class="plein"></i><i class="plein"></i><i></i></span><span class="sr">3 sur 4</span></p>
+        <p>Résiste à l'humidité et aux lavages répétés.</p>
+        <p class="ou">Cuisines, salles de bain, boiseries</p>
+      </li>
+      <li class="finition">
+        <div class="finition-ech" style="--brillance:.7; --reflet:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.42) 39%, rgba(255,255,255,.42) 45%, transparent 46%)" aria-hidden="true"></div>
+        <h3>Brillant</h3>
+        <p class="jauge">Brillance <span aria-hidden="true"><i class="plein"></i><i class="plein"></i><i class="plein"></i><i class="plein"></i></span><span class="sr">4 sur 4</span></p>
+        <p>Très résistant et lumineux, mais il révèle le moindre défaut du support.</p>
+        <p class="ou">Portes, plinthes, ferronnerie</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Questions ===== -->
+<section class="section section-blanche" id="questions" aria-labelledby="titre-questions">
+  <div class="enveloppe faq-grille">
+    <div class="section-tete">
+      <p class="surtitre" style="--pastille:#5D9B9B">Questions</p>
+      <h2 id="titre-questions">Ce que les clients demandent souvent</h2>
+      <p class="section-intro">Une autre question&nbsp;? <a href="#devis">Posez-la directement à Sékou</a>.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Le devis est-il gratuit&nbsp;?</summary>
+        <p>Oui. Sékou se déplace pour voir les surfaces, puis vous remet un devis écrit et détaillé, sans engagement.</p>
+      </details>
+      <details>
+        <summary>Comment le prix est-il calculé&nbsp;?</summary>
+        <p>Il dépend de la surface à peindre, de l'état des murs et de la finition choisie. Un mur fissuré demande plus de préparation qu'un mur sain. Chaque poste figure sur le devis&nbsp;: préparation, nombre de couches, produits.</p>
+      </details>
+      <details>
+        <summary>Qui fournit la peinture&nbsp;?</summary>
+        <p>Sékou peut fournir une peinture professionnelle adaptée à chaque pièce et à chaque support. Si vous avez déjà acheté la vôtre, précisez-le au moment du devis.</p>
+      </details>
+      <details>
+        <summary>Faut-il vider les pièces&nbsp;?</summary>
+        <p>Retirez les objets fragiles et les petits meubles. Le reste est regroupé au centre de la pièce et protégé sous bâche, comme les sols.</p>
+      </details>
+      <details>
+        <summary>Peut-on rester chez soi pendant les travaux&nbsp;?</summary>
+        <p>Oui. Les pièces sont traitées l'une après l'autre. Les peintures à l'eau, les plus utilisées en intérieur, sentent peu et sèchent vite.</p>
+      </details>
+      <details>
+        <summary>Combien de temps dure un chantier&nbsp;?</summary>
+        <p>Cela dépend surtout de la préparation et du temps de séchage entre deux couches. La durée prévue est indiquée sur le devis, avec la date de début.</p>
+      </details>
+      <details>
+        <summary>Pose-t-il le papier peint et les panoramiques&nbsp;?</summary>
+        <p>Oui&nbsp;: papiers peints classiques ou intissés, panoramiques et fresques murales. Vous choisissez votre modèle&nbsp;; Sékou prépare le mur, puis pose les lés un par un en soignant les raccords.</p>
+      </details>
+      <details>
+        <summary>Intervient-il pour les syndics, les bailleurs et les agences&nbsp;?</summary>
+        <p>Oui&nbsp;: parties communes d'immeubles, remises en état entre deux locataires, rafraîchissement d'un logement avant une vente ou une location.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Devis ===== -->
+<section class="section section-devis" id="devis" aria-labelledby="titre-devis">
+  <div class="enveloppe devis-grille">
+    <div class="devis-carte">
+      <div class="section-tete">
+        <p class="surtitre" style="--pastille:#FFC21A">Devis gratuit</p>
+        <h2 id="titre-devis">Parlez-lui de votre projet</h2>
+        <p class="section-intro">Remplissez ce formulaire en une minute. Votre demande s'ouvre ensuite dans WhatsApp ou dans votre messagerie, déjà rédigée. Il ne reste qu'à l'envoyer.</p>
+      </div>
+      <form id="form-devis" novalidate>
+        <p class="teinte-ajoutee" id="teinte-ajoutee" hidden><span class="pastille-teinte" id="teinte-ajoutee-couleur"></span><span id="teinte-ajoutee-texte"></span></p>
+        <div class="champs">
+          <div class="champ">
+            <label for="f-nom">Votre nom</label>
+            <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="f-nom-err">
+            <p class="champ-erreur" id="f-nom-err" hidden>Indiquez votre nom.</p>
+          </div>
+          <div class="champ">
+            <label for="f-tel">Téléphone</label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-tel-err">
+            <p class="champ-erreur" id="f-tel-err" hidden>Indiquez un numéro où Sékou peut vous rappeler.</p>
+          </div>
+          <div class="champ champ-large">
+            <label for="f-ville">Ville ou code postal du chantier</label>
+            <input id="f-ville" name="ville" type="text" autocomplete="address-level2" required aria-describedby="f-ville-err">
+            <p class="champ-erreur" id="f-ville-err" hidden>Indiquez où se trouve le chantier.</p>
+          </div>
+          <fieldset class="champ champ-large">
+            <legend>Type de bien</legend>
+            <div class="choix">
+              <label><input type="radio" id="f-bien-1" name="bien" value="Appartement"><span>Appartement</span></label>
+              <label><input type="radio" id="f-bien-2" name="bien" value="Maison"><span>Maison</span></label>
+              <label><input type="radio" id="f-bien-3" name="bien" value="Immeuble, parties communes"><span>Immeuble, parties communes</span></label>
+              <label><input type="radio" id="f-bien-4" name="bien" value="Local professionnel"><span>Local professionnel</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="champ champ-large">
+            <legend>Travaux <span class="aide">(plusieurs choix possibles)</span></legend>
+            <div class="choix">
+              <label><input type="checkbox" id="f-trav-1" name="travaux" value="Peinture intérieure"><span>Peinture intérieure</span></label>
+              <label><input type="checkbox" id="f-trav-2" name="travaux" value="Papier peint, panoramique"><span>Papier peint, panoramique</span></label>
+              <label><input type="checkbox" id="f-trav-3" name="travaux" value="Murs et plafonds abîmés"><span>Murs et plafonds abîmés</span></label>
+              <label><input type="checkbox" id="f-trav-4" name="travaux" value="Rénovation complète"><span>Rénovation complète</span></label>
+              <label><input type="checkbox" id="f-trav-5" name="travaux" value="Façade, extérieur"><span>Façade, extérieur</span></label>
+            </div>
+          </fieldset>
+          <div class="champ">
+            <label for="f-surface">Surface ou nombre de pièces</label>
+            <input id="f-surface" name="surface" type="text" placeholder="Ex. T3, ou 45 m² de murs">
+          </div>
+          <div class="champ">
+            <label for="f-delai">Délai souhaité</label>
+            <select id="f-delai" name="delai">
+              <option value="">Choisir…</option>
+              <option>Dès que possible</option>
+              <option>Dans le mois</option>
+              <option>D'ici 1 à 3 mois</option>
+              <option>Pas encore décidé</option>
+            </select>
+          </div>
+          <div class="champ champ-large">
+            <label for="f-teinte">Teinte souhaitée <span class="aide">(facultatif)</span></label>
+            <input id="f-teinte" name="teinte" type="text" placeholder="Ex. Blanc pur, ou à définir ensemble">
+          </div>
+          <div class="champ champ-large">
+            <label for="f-message">Votre message <span class="aide">(facultatif)</span></label>
+            <textarea id="f-message" name="message" placeholder="État des murs, hauteur sous plafond, accès, contraintes…"></textarea>
+          </div>
+        </div>
+        <div class="form-actions" style="margin-top:22px">
+          <a class="btn btn-jaune" id="envoi-whatsapp" href="https://wa.me/33783440311" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.4A8.5 8.5 0 1 1 20.5 11.5Z"/></svg>
+            Envoyer sur WhatsApp
+          </a>
+          <a class="btn btn-contour" id="envoi-email" href="mailto:fissourousekou@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Envoyer par email
+          </a>
+          <button class="btn btn-discret" id="copier-demande" type="button">Copier ma demande</button>
+        </div>
+        <p class="form-statut" id="form-statut" role="status" aria-live="polite" style="margin-top:14px"></p>
+        <label class="sr" for="apercu-demande">Texte de votre demande</label>
+        <textarea class="apercu" id="apercu-demande" readonly hidden style="margin-top:10px"></textarea>
+        <p class="form-note" style="margin-top:14px">Rien n'est enregistré sur ce site. Votre demande part uniquement par WhatsApp ou par email, quand vous l'envoyez.</p>
+      </form>
+    </div>
+
+    <!-- Coordonnées de Sékou (celles de sa carte de visite) -->
+    <aside class="contact-carte" aria-labelledby="titre-contact">
+      <h3 id="titre-contact">Contact direct</h3>
+      <dl>
+        <div>
+          <dt>Téléphone et WhatsApp</dt>
+          <dd><a href="tel:+33783440311" data-copiable><span class="nowrap">07 83 44 03 11</span></a><button class="copier" type="button" data-copier="07 83 44 03 11">Copier</button></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:fissourousekou@gmail.com" data-copiable>fissourousekou@gmail.com</a><button class="copier" type="button" data-copier="fissourousekou@gmail.com">Copier</button></dd>
+        </div>
+        <div>
+          <dt>Zone d'intervention</dt>
+          <dd class="petit">Pau et alentours, déplacements possibles partout en France</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied bande">
+  <div class="enveloppe">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="#haut" aria-label="Retour en haut de page">
+          <svg class="marque-logo" viewBox="0 0 40 40" aria-hidden="true">
+            <g transform="translate(20 36)">
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#5D9B9B" transform="rotate(-26)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#F0603F" transform="rotate(-9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#2443CC" transform="rotate(9)"/>
+              <rect class="logo-lame" x="-6" y="-31" width="12" height="31" rx="2.5" fill="#FFC21A" transform="rotate(26)"/>
+              <circle class="logo-rivet" r="3.2"/>
+            </g>
+          </svg>
+          <span class="marque-texte"><span class="marque-nom">Sékou Fissourou</span><span class="marque-metier">Peintre en bâtiment</span></span>
+        </a>
+        <p class="pied-intro">Peinture, papiers peints panoramiques, réparation des murs et des plafonds. Devis gratuit après visite.</p>
+      </div>
+      <div>
+        <p class="pied-titre">Le site</p>
+        <ul>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="#avant-apres">Avant / après</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#questions">Questions fréquentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied-titre">Contact</p>
+        <ul>
+          <li><span class="nowrap">07 83 44 03 11</span></li>
+          <li>fissourousekou@gmail.com</li>
+          <li><a href="#devis">Demander un devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <details class="mentions">
+        <summary>Mentions légales</summary>
+        <dl>
+          <dt>Éditeur</dt><dd>Sékou Fissourou, peintre en bâtiment</dd>
+          <dt>Statut et SIRET</dt><dd><span class="a-completer">à compléter</span></dd>
+          <dt>Adresse</dt><dd><span class="a-completer">à compléter</span></dd>
+          <dt>Contact</dt><dd><span class="nowrap">07 83 44 03 11</span> · fissourousekou@gmail.com</dd>
+          <dt>Directeur de la publication</dt><dd>Sékou Fissourou</dd>
+          <dt>Hébergeur</dt><dd>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis · <span class="nowrap">+1 650 319 8930</span></dd>
+        </dl>
+        <p>Les informations saisies dans le formulaire de devis ne sont pas enregistrées par ce site. Elles sont transmises uniquement par WhatsApp ou par email, à votre initiative.</p>
+      </details>
+      <p>© 2026 Sékou Fissourou</p>
+    </div>
+  </div>
+</footer>
+
+<div class="barre-mobile">
+  <a class="btn btn-contour" href="tel:+33783440311">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Appeler
+  </a>
+  <a class="btn btn-jaune" href="#devis">Devis gratuit</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
